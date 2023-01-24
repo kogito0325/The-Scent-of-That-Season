@@ -1,9 +1,10 @@
 1. 수정된 변경사항은 다음 내용만 업데이트 한다.
+- .vs
 - Assets
 - Logs
+- obj
 - Packages
 - ProjectSettings
-- Documentations
 - 기타 낱개 파일들
 
 2. 다음 내용은 절대 깃허브에 업데이트 하지 않고 git ignore에 추가한다.
