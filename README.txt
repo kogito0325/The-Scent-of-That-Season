@@ -1,6 +1,7 @@
 1. 수정된 변경사항은 다음 내용만 업데이트 한다.
 - .vs
 - Assets
+- Documentation
 - Logs
 - obj
 - Packages
