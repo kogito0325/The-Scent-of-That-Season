@@ -25,5 +25,3 @@ https://drive.google.com/drive/folders/0APk9MDDrtSnZUk9PVA
 
 6. 깃허브 링크
 https://github.com/kogito0325/Project-Dongseo-Pub
-
-7. test
