@@ -19,3 +19,9 @@
 - 수정을 진행한다.
 
 4. 기타 문제 사항이 생기면 진행을 멈추고 팀원에게 연락을 취한다. //중요함
+
+5. 구글 드라이브 링크
+https://drive.google.com/drive/folders/0APk9MDDrtSnZUk9PVA
+
+6. 깃허브 링크
+https://github.com/kogito0325/Project-Dongseo-Pub
