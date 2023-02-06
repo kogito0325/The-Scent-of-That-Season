@@ -46,9 +46,13 @@ public class chatController : MonoBehaviour
 
     IEnumerator TextPractice()
     {
-        string str = PlayerPrefs.GetString("Name");
-        yield return StartCoroutine(NormalChat("유가현", "안녕, " + str + "오늘 날씨가 춥지?"));
-        yield return StartCoroutine(NormalChat("유가현", "춥다"));
+        string str1 = PlayerPrefs.GetString("Name1");
+        string str2 = PlayerPrefs.GetString("Name2");
+        yield return StartCoroutine(NormalChat("유가현", "안녕, " + str1 + str2 + "! 오늘 날씨가 춥지?"));
+        yield return StartCoroutine(NormalChat("유가현", str2 + " 진짜 춥다. 그치?"));
         yield return StartCoroutine(NormalChat("유가현", "진짜 졸라 춥네"));
+        yield return StartCoroutine(NormalChat("지구하", "이게 뭐가 추워!"));
+        yield return StartCoroutine(NormalChat("지구하", "하나도 안춥지," + str2 + "?"));
+
     }
 }

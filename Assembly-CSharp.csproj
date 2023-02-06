@@ -59,6 +59,7 @@
     <Compile Include="Assets\Script\Startclick.cs" />
     <Compile Include="Assets\Script\chatController.cs" />
     <Compile Include="Assets\Script\NameScript.cs" />
+    <Compile Include="Assets\Script\Scene1Script.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
