@@ -50,7 +50,7 @@ public class Scene1Script : MonoBehaviour
         string str2 = PlayerPrefs.GetString("Name2");
         string name = str1 + str2;
         
-        for (int i = 0; i < data_Dialog.Count; i++)
+        for (int i = 1; i < data_Dialog.Count; i++)
         {
             int nameIdx = int.Parse(data_Dialog[i]["CHARACTER"].ToString());
             name = name_Dialog[nameIdx]["NAME"].ToString();
@@ -59,12 +59,7 @@ public class Scene1Script : MonoBehaviour
             yield return StartCoroutine(NormalChat(name, data_Dialog[i]["SCRIPT"].ToString(), int.Parse(data_Dialog[i]["CHARACTER"].ToString())));
             Debug.Log(data_Dialog[i]["SCRIPT"].ToString());
         }
-        yield return StartCoroutine(NormalChat(str1 + str2, "³¯¾¾°¡ ½Ò½ÒÇØÁ³³×..", 0));
-        yield return StartCoroutine(NormalChat("À¯°¡Çö", "¾È³ç, " + str1 + str2 + "! ¿À´Ã ³¯¾¾°¡ ÃäÁö?",2));
-        yield return StartCoroutine(NormalChat("À¯°¡Çö", str2 + " ÁøÂ¥ Ãä´Ù. ±×Ä¡?",2));
-        yield return StartCoroutine(NormalChat("À¯°¡Çö", "(ÁøÂ¥ Á¹¶ó Ãä³×)",2));
-        yield return StartCoroutine(NormalChat("Áö±¸ÇÏ", "ÀÌ°Ô ¹¹°¡ Ãß¿ö!",1));
-        yield return StartCoroutine(NormalChat("Áö±¸ÇÏ", "ÇÏ³ªµµ ¾ÈÃäÁö" + str2 + "?",1));
+;
     }
     // Update is called once per frame
     void Update()
