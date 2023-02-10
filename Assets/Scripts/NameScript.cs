@@ -7,14 +7,17 @@ using UnityEngine.UI;
 public class NameScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public InputField inputName; //성
-    public InputField inputName2; //이름
+    public InputField inputName;
 
-    public void Save()
+    public void SaveName()
     {
-        PlayerPrefs.SetString("Name1", inputName.text); //성
-        PlayerPrefs.SetString("Name2", inputName2.text); //이름
-        SceneManager.LoadScene("GameScene");
+        if (string.IsNullOrEmpty(inputName.text) || string.IsNullOrWhiteSpace(inputName.text))
+            Debug.Log("이름을 제대로 입력하여 주세요.");
+        else
+        {
+            PlayerPrefs.SetString("name", inputName.text); //성
+            SceneManager.LoadScene("ChatScene");
+        }
     }
     void Start()
     {
@@ -24,6 +27,7 @@ public class NameScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Return))
+            SaveName();
     }
 }
