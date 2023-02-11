@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class GameManager : MonoBehaviour
     //이 게임 내에서 게임매니저 인스턴스는 이 instance에 담긴 녀석만 존재하게 할 것이다.
     //보안을 위해 private으로.
     private static GameManager instance = null;
+
+    public List<Dictionary<string, object>> scriptTable;
+    public List<Dictionary<string, object>> chapterTable;
+    public List<Dictionary<string, object>> nameTable;
 
     public int contextIdx = 0;
 
@@ -31,6 +36,10 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    private void Start()
+    {
+        InitGame();
+    }
 
     //게임 매니저 인스턴스에 접근할 수 있는 프로퍼티. static이므로 다른 클래스에서 맘껏 호출할 수 있다.
     public static GameManager Instance
@@ -45,9 +54,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void UpdateIdx(int idx)
+    {
+        contextIdx = idx;
+    }
+
     public void InitGame()
     {
-        contextIdx = PlayerPrefs.GetInt("contextIdx", 0);
+        //contextIdx = PlayerPrefs.GetInt("contextIdx", 0);
+        contextIdx = 1;
+
+        scriptTable = CSVReader.Read("ScriptTable");
+        chapterTable = CSVReader.Read("ChapterTable");
+        nameTable = CSVReader.Read("CharacterNameTable");
     }
 
     public void PauseGame()
@@ -62,7 +81,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-
+        SceneManager.LoadScene("TitleScene");
     }
 
     public void StopGame()

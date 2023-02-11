@@ -1,5 +1,5 @@
-﻿no,CHAPTER,NAME,START_POINT,END_POINT
-0,0,null,0,0
-1,1,아찔한 첫만남(1),1,28
-2,1,아찔한 첫만남(2),55,55
-3,1,,,
+﻿no,CHAPTER,NAME,START_POINT,END_POINT,LOVE1,LOVE2,LOVE3,MONEY
+0,0,null,0,0,0,0,0,0
+1,1,아찔한 첫만남(1),2,61,0,0,0,0
+2,2,,,,,,,
+3,3,,,,,,,
