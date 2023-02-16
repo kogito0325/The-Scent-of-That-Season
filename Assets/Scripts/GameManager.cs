@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
 
     public void InitGame()
     {
-        //contextIdx = PlayerPrefs.GetInt("contextIdx", 0);
+        //contextIdx = PlayerPrefs.GetInt("contextIdx", 0); <- 디버그용
         contextIdx = 1;
 
         scriptTable = CSVReader.Read("ScriptTable");

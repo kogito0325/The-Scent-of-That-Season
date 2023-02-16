@@ -22,7 +22,6 @@ public class ScriptReader : MonoBehaviour
     List<Dictionary<string, object>> chapterTable; // 챕터 테이블
     List<Dictionary<string, object>> nameTable; // 캐릭터 이름 테이블
 
-    // Start is called before the first frame update
 
     private void Awake()
     {
@@ -33,13 +32,14 @@ public class ScriptReader : MonoBehaviour
     }
     void Start()
     {
-        // 게임 매니저의 현재 인덱스 참조
+        // 게임 매니저의 현재 인덱스(contextIdx) 참조
         // 프로세스 진행
         StartCoroutine(Process(GameManager.Instance.contextIdx));
     }
 
     public IEnumerator TextPrint(string narrator, string narration, int chr)
-    { // 실제로 캐릭터 대사를 문자열로 받아 출력하는 코루틴 함수
+    {   // 실제로 캐릭터 대사를 문자열로 받아 출력하는 코루틴 함수
+        // NormalChat 에서 돌아감
 
         float textSpeed = 0.02f; // 텍스트 출력 속도
         CharacterName.text = narrator;
@@ -61,7 +61,7 @@ public class ScriptReader : MonoBehaviour
         }
     }
     public IEnumerator NormalChat(int startIdx, int endIdx)
-    { // 일반적인 대사를 출력하는 코루틴 함수
+    {   // 일반적인 대사를 출력하는 코루틴 함수
         string gottenName = PlayerPrefs.GetString("name");
         string name;
         string script;
@@ -78,7 +78,7 @@ public class ScriptReader : MonoBehaviour
     }
 
     public IEnumerator Process(int contextIdx)
-    { // 인덱스를 받아 CONTENT에 따라 대사를 처리하는 코루틴 함수
+    {   // 인덱스를 받아 CONTENT에 따라 대사를 처리하는 코루틴 함수
         int startIdx = int.Parse(scriptTable[contextIdx]["START_POINT"].ToString());
         int endIdx = int.Parse(scriptTable[contextIdx]["END_POINT"].ToString());
         string process = scriptTable[contextIdx]["CONTENT"].ToString();
@@ -100,13 +100,13 @@ public class ScriptReader : MonoBehaviour
     }
 
     IEnumerator NormalChatProcess(int startIdx, int endIdx)
-    {
+    {   // 일반 대화를 진행하는 프로세스 함수
         yield return StartCoroutine(NormalChat(startIdx, endIdx)); // 일반 대화 처리 대기
         GameManager.Instance.UpdateIdx(++endIdx);
     }
 
     IEnumerator ChoiceProcess(int startIdx, int endIdx)
-    {
+    {   // 선택지를 진행하는 프로세스 함수
         int tempEndIdx = int.Parse(scriptTable[endIdx]["END_POINT"].ToString());
         for (int i = startIdx; i <= endIdx; i++)
         {
@@ -121,20 +121,20 @@ public class ScriptReader : MonoBehaviour
     }
 
     IEnumerator EndProcess(int startIdx, int endIdx)
-    {
+    {   // 챕터 끝을 알리고 진행하는 프로세스 함수
         GameManager.Instance.UpdateIdx(++endIdx);
         GameManager.Instance.RestartGame();
         yield break;
     }
 
     void ActivateButtons(int idx, int choiceIdx)
-    {
+    {   // 선택지를 활성화 하는 함수
         choiceButtons[idx].gameObject.SetActive(true);
         choiceButtons[idx].GetComponent<BtnManager>().choiceIdx = choiceIdx;
     }
 
     IEnumerator GetNumber()
-    {
+    {   // 선택지 클릭을 기다리는 함수
         while (!choosed) // BtnManager.ChooseNum()
         {
             yield return null;
@@ -142,11 +142,5 @@ public class ScriptReader : MonoBehaviour
         choosed = false;
         foreach (var button in choiceButtons)
             button.gameObject.SetActive(false); // 선택지 비활성화
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
