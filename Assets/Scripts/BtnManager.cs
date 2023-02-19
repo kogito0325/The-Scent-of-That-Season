@@ -9,7 +9,9 @@ public class BtnManager : MonoBehaviour
 {
 
     public int choiceIdx; // 선택지 버튼마다 부여되는 scriptIdx
+    public string choiceContent;
     public ScriptReader scriptReader; // 스크립트 리더랑 상호작용 하기 위한 변수
+    public Text choiceTxt;
 
     public List<Dictionary<string, object>> scriptTable; // 스크립트 테이블
 
