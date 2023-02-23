@@ -25,6 +25,10 @@ public class BtnManager : MonoBehaviour
         SceneManager.LoadScene("InputScene");
     }
 
+    public void StartSchedule()
+    {
+        SceneManager.LoadScene("ScheduleScene");
+    }
 
     public void SaveName(InputField inputName)
     {   // 이름 저장하는 버튼 - 저장 후 대화 화면 로드

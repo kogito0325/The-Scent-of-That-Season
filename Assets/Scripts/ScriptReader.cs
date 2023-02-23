@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using System.Linq;
-using UnityEditorInternal;
 
 public class ScriptReader : MonoBehaviour
 {
@@ -112,7 +109,7 @@ public class ScriptReader : MonoBehaviour
         {
             ActivateButtons(i - startIdx, i); // 선택지 활성화
         }
-        
+
         yield return StartCoroutine(GetNumber()); // 선택지 고를 때까지 대기
         startIdx = int.Parse(scriptTable[GameManager.Instance.contextIdx]["START_POINT"].ToString());
         endIdx = int.Parse(scriptTable[GameManager.Instance.contextIdx]["END_POINT"].ToString());
