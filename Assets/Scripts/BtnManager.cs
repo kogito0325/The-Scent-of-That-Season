@@ -41,9 +41,17 @@ public class BtnManager : MonoBehaviour
         }
     }
 
-    public void chooseNum()
+    public void ChooseNum()
     {   // 선택지 버튼 - ScriptReader로 클릭한 변수 전달
         GameManager.Instance.UpdateIdx(choiceIdx);
         scriptReader.choosed = true;
+    }
+
+    public void SwitchEventList(GameObject list)
+    {
+        if (!list.activeSelf)
+            list.SetActive(true);
+        else
+            list.SetActive(false);
     }
 }

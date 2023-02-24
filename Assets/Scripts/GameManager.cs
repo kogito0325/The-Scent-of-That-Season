@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
         loveFall= Random.Range(0, 100);
         loveWinter = Random.Range(0, 100);
         contextIdx = 1;
-        month = 3;
+        month = Random.Range(3, 7);
         money = Random.Range(0, 10000000);
 
         scriptTable = CSVReader.Read("ScriptTable");
