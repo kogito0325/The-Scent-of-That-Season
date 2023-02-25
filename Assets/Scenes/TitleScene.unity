@@ -153,6 +153,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contextIdx: 0
+  month: 3
+  loveSummer: 0
+  loveFall: 0
+  loveWinter: 0
+  money: 0
 --- !u!4 &118088610
 Transform:
   m_ObjectHideFlags: 0
@@ -823,7 +828,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1117579968}
         m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: StartSchedule
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -884,6 +889,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choiceIdx: 0
+  choiceContent: 
+  scriptReader: {fileID: 0}
+  choiceTxt: {fileID: 0}
 --- !u!1 &1159898828
 GameObject:
   m_ObjectHideFlags: 0

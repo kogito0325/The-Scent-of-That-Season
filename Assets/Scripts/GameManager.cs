@@ -15,6 +15,11 @@ public class GameManager : MonoBehaviour
     public List<Dictionary<string, object>> nameTable;
 
     public int contextIdx = 0;
+    public int month = 3;
+    public int loveSummer = 0;
+    public int loveFall = 0;
+    public int loveWinter = 0;
+    public int money = 0;
 
     void Awake()
     {
@@ -61,8 +66,19 @@ public class GameManager : MonoBehaviour
 
     public void InitGame()
     {
-        //contextIdx = PlayerPrefs.GetInt("contextIdx", 0); <- 디버그용
+        //contextIdx = PlayerPrefs.GetInt("contextIdx", 0); <- 디버그 해야돼서 일단 매 시작 때마다 초기화 해줌
+        //month = PlayerPrefs.GetInt("month", 3);
+        /*loveSummer = PlayerPrefs.GetInt("loveSummer", 0);
+        loveFall = PlayerPrefs.GetInt("loveFall", 0);
+        loveWinter = PlayerPrefs.GetInt("loveWinter", 0);*/
+        //money = PlayerPrefs.GetInt("money", 0);
+
+        loveSummer = Random.Range(0, 100);
+        loveFall= Random.Range(0, 100);
+        loveWinter = Random.Range(0, 100);
         contextIdx = 1;
+        month = Random.Range(3, 7);
+        money = Random.Range(0, 10000000);
 
         scriptTable = CSVReader.Read("ScriptTable");
         chapterTable = CSVReader.Read("ChapterTable");
@@ -87,5 +103,10 @@ public class GameManager : MonoBehaviour
     public void StopGame()
     {
         PlayerPrefs.SetInt("contextIdx", contextIdx);
+        PlayerPrefs.SetInt("month", month);
+        PlayerPrefs.SetInt("loveSummer", loveSummer);
+        PlayerPrefs.SetInt("loveFall", loveFall);
+        PlayerPrefs.SetInt("loveWinter", loveWinter);
+        PlayerPrefs.SetInt("money", money);
     }
 }

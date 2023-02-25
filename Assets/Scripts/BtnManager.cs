@@ -9,7 +9,9 @@ public class BtnManager : MonoBehaviour
 {
 
     public int choiceIdx; // 선택지 버튼마다 부여되는 scriptIdx
+    public string choiceContent;
     public ScriptReader scriptReader; // 스크립트 리더랑 상호작용 하기 위한 변수
+    public Text choiceTxt;
 
     public List<Dictionary<string, object>> scriptTable; // 스크립트 테이블
 
@@ -23,6 +25,10 @@ public class BtnManager : MonoBehaviour
         SceneManager.LoadScene("InputScene");
     }
 
+    public void StartSchedule()
+    {
+        SceneManager.LoadScene("ScheduleScene");
+    }
 
     public void SaveName(InputField inputName)
     {   // 이름 저장하는 버튼 - 저장 후 대화 화면 로드
@@ -35,9 +41,17 @@ public class BtnManager : MonoBehaviour
         }
     }
 
-    public void chooseNum()
+    public void ChooseNum()
     {   // 선택지 버튼 - ScriptReader로 클릭한 변수 전달
         GameManager.Instance.UpdateIdx(choiceIdx);
         scriptReader.choosed = true;
+    }
+
+    public void SwitchEventList(GameObject list)
+    {
+        if (!list.activeSelf)
+            list.SetActive(true);
+        else
+            list.SetActive(false);
     }
 }
