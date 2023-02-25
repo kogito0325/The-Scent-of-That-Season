@@ -12,6 +12,7 @@ public class BtnManager : MonoBehaviour
     public string choiceContent;
     public ScriptReader scriptReader; // 스크립트 리더랑 상호작용 하기 위한 변수
     public Text choiceTxt;
+    public GameObject tetromino;
 
     public List<Dictionary<string, object>> scriptTable; // 스크립트 테이블
 
@@ -53,5 +54,12 @@ public class BtnManager : MonoBehaviour
             list.SetActive(true);
         else
             list.SetActive(false);
+    }
+
+    public void GetTetromino()
+    {
+        tetromino = Instantiate(tetromino);
+        tetromino.GetComponent<TetroScript>().SwitchSize();
+        gameObject.SetActive(false);
     }
 }

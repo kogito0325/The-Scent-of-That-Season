@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.ExceptionServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -49,5 +50,28 @@ public class CalenderScript : MonoBehaviour
             days[i].SetActive(true);
 
         monthImage.sprite = monthImages[month - 3];
+    }
+
+    public void LocateTetromino()
+    {
+        GameObject tetromino = GameObject.Find("TestTetromino(Clone)");
+        Vector3 tempPosition = new Vector3(0, 0, 0);
+        int length = 0;
+        foreach (GameObject tileVec in days)
+        {
+            if (tileVec.tag == "OnTiled")
+            {
+                tempPosition += tileVec.transform.position;
+                length++;
+                tileVec.tag = "Tile";
+                tileVec.GetComponent<Collider2D>().enabled = false;
+            }
+        }
+
+        tempPosition /= length;
+        tetromino.transform.position = tempPosition;
+        tetromino.GetComponent<TetroScript>().SwitchSize();
+        tetromino.name = "TestTetromino";
+        tetromino.GetComponent<TetroScript>().enabled = false;
     }
 }
