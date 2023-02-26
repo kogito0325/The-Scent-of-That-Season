@@ -278,7 +278,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 369069117}
         m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: chooseNum
+        m_MethodName: ChooseNum
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -342,6 +342,7 @@ MonoBehaviour:
   choiceContent: 
   scriptReader: {fileID: 454867966}
   choiceTxt: {fileID: 1795506649}
+  tetromino: {fileID: 0}
 --- !u!1 &454867965
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,7 +754,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 834766084}
         m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: chooseNum
+        m_MethodName: ChooseNum
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -817,6 +818,7 @@ MonoBehaviour:
   choiceContent: 
   scriptReader: {fileID: 454867966}
   choiceTxt: {fileID: 1477340446}
+  tetromino: {fileID: 0}
 --- !u!1 &883414574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,7 +1543,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1887332587}
         m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: chooseNum
+        m_MethodName: ChooseNum
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1605,6 +1607,7 @@ MonoBehaviour:
   choiceContent: 
   scriptReader: {fileID: 454867966}
   choiceTxt: {fileID: 655720589}
+  tetromino: {fileID: 0}
 --- !u!1 &1903252561
 GameObject:
   m_ObjectHideFlags: 0
