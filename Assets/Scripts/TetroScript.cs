@@ -9,7 +9,7 @@ public class TetroScript : MonoBehaviour
     Vector3 beforeSize;
     public bool tiny;
 
-    // Start is called before the first frame update
+    
     void Awake()
     {
         beforeColor = new Color(.4980f, .4980f, .4980f, .5333f);
@@ -17,7 +17,7 @@ public class TetroScript : MonoBehaviour
         tiny = false;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         transform.position = Input.mousePosition;

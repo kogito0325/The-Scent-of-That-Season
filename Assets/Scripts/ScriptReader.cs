@@ -6,8 +6,12 @@ using UnityEngine.UI;
 public class ScriptReader : MonoBehaviour
 {
     public Image emptyImage; // 캐릭터 이미지 홀더
+    public Image emptyBackgroundImage; // 배경 이미지 홀덩
+    public Image fadeImage; // 페이드인, 아웃 구현 위한 이미지(필요없음)
+
     public Sprite[] characterImages; // 캐릭터 이미지 리스트
     public Button[] choiceButtons; // 선택지 UI 리스트
+    public Sprite[] backgroundImages; // 배경 이미지 리스트
 
     public Text ChatText; // 대사
     public Text CharacterName; // 캐릭터 이름
@@ -34,17 +38,17 @@ public class ScriptReader : MonoBehaviour
         StartCoroutine(Process(GameManager.Instance.contextIdx));
     }
 
-    public IEnumerator TextPrint(string narrator, string narration, int chr)
+    public IEnumerator TextPrint(string narrator, string narration, int imageIdx)
     {   // 실제로 캐릭터 대사를 문자열로 받아 출력하는 코루틴 함수
         // NormalChat 에서 돌아감
 
         float textSpeed = 0.02f; // 텍스트 출력 속도
         CharacterName.text = narrator;
         writerText = "";
-        emptyImage.sprite = characterImages[chr];
+        emptyImage.sprite = characterImages[imageIdx];
 
         for (int i = 0; i < narration.Length; i++)
-        {
+        {   // 출력 속도에 따라 한글자씩 화면에 출력
             writerText += narration[i];
             ChatText.text = writerText;
             yield return new WaitForSeconds(textSpeed);
@@ -59,18 +63,26 @@ public class ScriptReader : MonoBehaviour
     }
     public IEnumerator NormalChat(int startIdx, int endIdx)
     {   // 일반적인 대사를 출력하는 코루틴 함수
-        string gottenName = PlayerPrefs.GetString("name");
-        string name;
-        string script;
+        string gottenName = PlayerPrefs.GetString("name"); // 컴에 저장된 이름 불러오기
+        string name; // 캐릭터 이름
+        string content; // 캐릭터가 말하는 대사
+        string action; // 연출
 
         for (int i = startIdx; i <= endIdx; i++)
         {
-            int nameIdx = int.Parse(scriptTable[i]["CHARACTER"].ToString());
-            name = nameTable[nameIdx]["NAME"].ToString();
-            script = scriptTable[i]["CONTENT"].ToString();
+            int nameIdx = int.Parse(scriptTable[i]["CHARACTER"].ToString()); // 대사치는 캐릭터 이름 인덱스 불러오기
+            int imageIdx = int.Parse(scriptTable[i]["IMAGE"].ToString()); // 대사치는 캐릭터 사진 인덱스 불러오기
+            name = nameTable[nameIdx]["NAME"].ToString(); // 네임 테이블에서 인덱싱
+            action = scriptTable[i]["ACTION"].ToString();
+            content = scriptTable[i]["CONTENT"].ToString();
+
+            // 테이블에서 "주인공" 이면 저장된 이름으로 변경
             if (name.Equals("주인공"))
                 name = gottenName;
-            yield return StartCoroutine(TextPrint(name, script, nameIdx)); // 대사가 다 출력될 때까지 대기
+
+            if (action != null)
+                yield return StartCoroutine(ActionProcess(action, i)); // 연출이 있으면 연출 실행
+            yield return StartCoroutine(TextPrint(name, content, imageIdx)); // 대사가 다 출력될 때까지 대기
         }
     }
 
@@ -87,11 +99,14 @@ public class ScriptReader : MonoBehaviour
             case "~선택지":
                 yield return StartCoroutine(ChoiceProcess(startIdx, endIdx)); // 선택 및 선택 구문이 다 끝날 때까지 대기
                 break;
+            case "~이동":
+                GameManager.Instance.UpdateIdx(endIdx); // 테이블에서 가리킨 인덱스로 이동
+                break;
             case "~챕터끝":
                 yield return StartCoroutine(EndProcess(startIdx, endIdx)); // 챕터를 끝내는 처리 대기
                 break;
         }
-        contextIdx = GameManager.Instance.contextIdx;
+        contextIdx = GameManager.Instance.contextIdx; // 한 프로세스 끝나면 컨텍스트 갱신
 
         yield return StartCoroutine(Process(contextIdx)); // 다음 CONTENT 시작
     }
@@ -104,7 +119,6 @@ public class ScriptReader : MonoBehaviour
 
     IEnumerator ChoiceProcess(int startIdx, int endIdx)
     {   // 선택지를 진행하는 프로세스 함수
-        int tempEndIdx = int.Parse(scriptTable[endIdx]["END_POINT"].ToString());
         for (int i = startIdx; i <= endIdx; i++)
         {
             ActivateButtons(i - startIdx, i); // 선택지 활성화
@@ -114,7 +128,7 @@ public class ScriptReader : MonoBehaviour
         startIdx = int.Parse(scriptTable[GameManager.Instance.contextIdx]["START_POINT"].ToString());
         endIdx = int.Parse(scriptTable[GameManager.Instance.contextIdx]["END_POINT"].ToString());
         yield return StartCoroutine(NormalChat(startIdx, endIdx)); // 고른 선택지에 따른 대사 출력
-        GameManager.Instance.UpdateIdx(++tempEndIdx);
+        GameManager.Instance.UpdateIdx(++endIdx);
     }
 
     IEnumerator EndProcess(int startIdx, int endIdx)
@@ -122,6 +136,20 @@ public class ScriptReader : MonoBehaviour
         GameManager.Instance.UpdateIdx(++endIdx);
         GameManager.Instance.RestartGame();
         yield break;
+    }
+
+    IEnumerator ActionProcess(string action, int nowIdx)
+    {   // 연출을 받고 처리하는 프로세스 함수
+        // action 은 NormalChat()에서 제공 받는 한글 string
+        if (action == "페이드 아웃")
+            emptyBackgroundImage.CrossFadeAlpha(0f, 1f, true);
+        else if (action == "페이드 인")
+        {
+            // 페이드 인 할 때 배경이 바뀐다면 스프라이트 변경
+            emptyBackgroundImage.sprite = backgroundImages[int.Parse(scriptTable[nowIdx]["BACKGROUND"].ToString())];
+            emptyBackgroundImage.CrossFadeAlpha(1f, 1f, true);
+        }
+        yield return null;
     }
 
     void ActivateButtons(int idx, int choiceIdx)

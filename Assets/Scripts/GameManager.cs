@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
     public void UpdateIdx(int idx)
     {
         contextIdx = idx;
+        Debug.Log("idx updated -> " + contextIdx.ToString());
     }
 
     public void InitGame()
