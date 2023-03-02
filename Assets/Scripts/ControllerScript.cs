@@ -12,8 +12,8 @@ public class ControllerScript : MonoBehaviour
     void Update()
     {
         //이동키: WASD, 상하좌우 이동
-        moveX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        moveY = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        moveX = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
+        moveY = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
 
         transform.position = new Vector2(transform.position.x + moveX, transform.position.y + moveY);
     }
