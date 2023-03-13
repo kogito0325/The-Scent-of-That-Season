@@ -34,14 +34,14 @@ public class ScheduleManager : MonoBehaviour
 
     private void UpdateLoves()
     {
-        loveAmount[0].text = "지구하\n" + loveSummer.ToString() + "%";
-        loveAmount[1].text = "유가현\n" + loveFall.ToString() + "%";
-        loveAmount[2].text = "한서령\n" + loveWinter.ToString() + "%";
+        loveAmount[0].text = loveSummer.ToString() + "%";
+        loveAmount[1].text = loveFall.ToString() + "%";
+        loveAmount[2].text = loveWinter.ToString() + "%";
     }
 
     private void UpdateMoney()
     {
         money = GameManager.Instance.money;
-        moneyTxt.text = money.ToString() + "원";
+        moneyTxt.text = money.ToString();
     }
 }

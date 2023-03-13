@@ -24,7 +24,7 @@ public class CalenderScript : MonoBehaviour
 
         month = GameManager.Instance.month;
         int dayStart = 1;
-        int dayEnd = 42;
+        int dayEnd = 35;
         switch (month)
         {
             case 3:
@@ -32,8 +32,8 @@ public class CalenderScript : MonoBehaviour
                 dayEnd = 34;
                 break;
             case 4:
-                dayStart = 7;
-                dayEnd= 36;
+                dayStart = 6;
+                dayEnd= 35;
                 break;
             case 5:
                 dayStart = 2;
