@@ -16,5 +16,6 @@ public class ControllerScript : MonoBehaviour
         moveY = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
 
         transform.position = new Vector2(transform.position.x + moveX, transform.position.y + moveY);
+
     }
 }
