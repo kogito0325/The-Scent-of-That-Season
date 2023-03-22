@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using System;
 
 public class BtnManager : MonoBehaviour
 {
@@ -19,7 +20,14 @@ public class BtnManager : MonoBehaviour
     private void Awake()
     {
         // 테이블 초기화
-        scriptTable = GameManager.Instance.scriptTable;
+        try
+        {
+            scriptTable = GameManager.Instance.scriptTable;
+        }
+        catch (NullReferenceException)
+        {
+            scriptTable = null;
+        }
     }
     public void StartGame()
     {   // 게임 시작 버튼 - 이름 입력 화면 로드
@@ -29,6 +37,15 @@ public class BtnManager : MonoBehaviour
     public void StartSchedule()
     {   // 스케줄 버튼 - 달력 화면 로드
         SceneManager.LoadScene("ScheduleScene");
+    }
+
+    public void EndGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        UnityEngine.Application.Quit();
+#endif
     }
 
     public void SaveName(InputField inputName)

@@ -72,3 +72,13 @@ The following packages were updated:
   com.unity.ide.rider from version 2.0.7 to 3.0.16
   com.unity.ide.visualstudio from version 2.0.15 to 2.0.16
   com.unity.timeline from version 1.4.8 to 1.6.4
+
+=== Wed Mar 22 21:21:19 2023
+
+Packages were changed.
+Update Mode: resetToDefaultDependencies
+
+The following packages were added:
+  com.unity.visualscripting@1.7.8
+The following packages were removed:
+  com.unity.2d.sprite@1.0.0
