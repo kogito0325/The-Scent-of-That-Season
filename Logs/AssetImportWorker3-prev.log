@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'ko' Physical Memory: 7911 MB
+OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'ko' Physical Memory: 32544 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-D:\Unity\Editor\2021.3.16f1\Editor\Unity.exe
+D:\2021.3.16f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker3
 -projectPath
-D:/Unity/Dongseo Pub
+D:/Dongseo_Pub/Project-Dongseo-Pub
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-59435
-Successfully changed project path to: D:/Unity/Dongseo Pub
-D:/Unity/Dongseo Pub
+59014
+Successfully changed project path to: D:/Dongseo_Pub/Project-Dongseo-Pub
+D:/Dongseo_Pub/Project-Dongseo-Pub
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,117 +47,118 @@ D:/Unity/Dongseo Pub
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [11604] Host "[IP] 192.168.135.49 [Port] 0 [Flags] 2 [Guid] 1042556005 [EditorId] 1042556005 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3IDOKRA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [12176] Host "[IP] 192.168.133.48 [Port] 0 [Flags] 2 [Guid] 2991925921 [EditorId] 2991925921 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-9J2DAE7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [11604] Host "[IP] 192.168.135.49 [Port] 0 [Flags] 2 [Guid] 1042556005 [EditorId] 1042556005 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3IDOKRA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [12176] Host "[IP] 192.168.133.48 [Port] 0 [Flags] 2 [Guid] 2991925921 [EditorId] 2991925921 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-9J2DAE7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 21.08 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 97.33 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
-[Subsystems] Discovering subsystems at path D:/Unity/Editor/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Unity/Dongseo Pub/Assets
+[Subsystems] Discovering subsystems at path D:/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Dongseo_Pub/Project-Dongseo-Pub/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f82)
+    Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2489)
     Vendor:   NVIDIA
-    VRAM:     3950 MB
-    Driver:   31.0.15.2737
+    VRAM:     8050 MB
+    Driver:   30.0.14.7404
 Initialize mono
-Mono path[0] = 'D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Unity/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'D:/Unity/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56516
+Mono path[0] = 'D:/2021.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'D:/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56164
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Unity/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Register platform support module: D:/Unity/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001813 seconds.
+Register platform support module: D:/2021.3.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002421 seconds.
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 21.19 ms, found 2 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 89.45 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.513 seconds
+- Completed reload, in  0.653 seconds
 Domain Reload Profiling:
-	ReloadAssembly (514ms)
-		BeginReloadAssembly (63ms)
+	ReloadAssembly (653ms)
+		BeginReloadAssembly (78ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (340ms)
-			LoadAssemblies (62ms)
+		EndReloadAssembly (472ms)
+			LoadAssemblies (77ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (90ms)
+			SetupTypeCache (128ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (186ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (265ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (43ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (21ms)
+				RefreshPlugins (90ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (79ms)
-				ProcessInitializeOnLoadMethodAttributes (42ms)
+				ProcessInitializeOnLoadAttributes (124ms)
+				ProcessInitializeOnLoadMethodAttributes (44ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001134 seconds.
+Registered in 0.006379 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Dongseo_Pub\Project-Dongseo-Pub\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Dongseo_Pub\Project-Dongseo-Pub\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 81.25 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.902 seconds
+- Completed reload, in  0.989 seconds
 Domain Reload Profiling:
-	ReloadAssembly (903ms)
-		BeginReloadAssembly (205ms)
+	ReloadAssembly (990ms)
+		BeginReloadAssembly (97ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (126ms)
-		EndReloadAssembly (597ms)
-			LoadAssemblies (64ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (798ms)
+			LoadAssemblies (86ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (164ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (58ms)
-			SetupLoadedEditorAssemblies (263ms)
+			SetupTypeCache (221ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (405ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (41ms)
-				ProcessInitializeOnLoadAttributes (189ms)
-				ProcessInitializeOnLoadMethodAttributes (20ms)
+				RefreshPlugins (81ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (206ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.28 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.93 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1702 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 19 unused Assets / (56.6 KB). Loaded Objects now: 2183.
-Memory consumption went from 85.7 MB to 85.6 MB.
-Total: 3.963200 ms (FindLiveObjects: 0.450700 ms CreateObjectMapping: 0.222800 ms MarkObjects: 3.124200 ms  DeleteObjects: 0.162800 ms)
+Unloading 4054 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (56.4 KB). Loaded Objects now: 4511.
+Memory consumption went from 150.9 MB to 150.9 MB.
+Total: 3.154200 ms (FindLiveObjects: 0.289700 ms CreateObjectMapping: 0.268900 ms MarkObjects: 2.533800 ms  DeleteObjects: 0.061000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -165,28 +166,52 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 552579.036317 seconds.
-  path: Assets/Images/2. 달력/설정 버튼.png
-  artifactKey: Guid(f0477b4e200d4eb41b58970e2cd4092c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/2. 달력/설정 버튼.png using Guid(f0477b4e200d4eb41b58970e2cd4092c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17339dae340aabf32dd1e0a43c3d7554') in 0.230981 seconds 
+  Time since last request: 804447.778997 seconds.
+  path: Assets/Images/0. 임시/주인공 스프라이트/주인공B1.png
+  artifactKey: Guid(b5d002323daf76449adbb9c360a1d976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/0. 임시/주인공 스프라이트/주인공B1.png using Guid(b5d002323daf76449adbb9c360a1d976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f4068c80e59f674bf1e873d7cc12cfd') in 0.255801 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Images/2. 달력/달력 캐릭터 퍼센트 풀.png
-  artifactKey: Guid(5f87631a58c48ed48a72dc5417fa80ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/2. 달력/달력 캐릭터 퍼센트 풀.png using Guid(5f87631a58c48ed48a72dc5417fa80ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61de60259e773a1d71154625b3ca6390') in 0.016726 seconds 
+  Time since last request: 0.000026 seconds.
+  path: Assets/Images/0. 임시/주인공 스프라이트/주인공F2.png
+  artifactKey: Guid(d2ef45535cf7d61498cb5e7af1ccd4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/0. 임시/주인공 스프라이트/주인공F2.png using Guid(d2ef45535cf7d61498cb5e7af1ccd4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37b009df23ef150c8c7278b0ff5b2f8a') in 0.118710 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Images/2. 달력/달력.png
-  artifactKey: Guid(074718c04dcce0344ba3f2125cf59793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/2. 달력/달력.png using Guid(074718c04dcce0344ba3f2125cf59793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd71322bdefd0aa66c1323a88f319b048') in 0.096979 seconds 
+  Time since last request: 0.000022 seconds.
+  path: Assets/Images/0. 임시/주인공 스프라이트/주인공S2.png
+  artifactKey: Guid(00b323a47484d8c46b84291832a7108d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/0. 임시/주인공 스프라이트/주인공S2.png using Guid(00b323a47484d8c46b84291832a7108d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08efad97470b2458dbb5cad8032d0049') in 0.115232 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Images/2. 달력/달력 캐릭터 초상화.png
-  artifactKey: Guid(5f5c382c968181c4496cfc084a49e71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/2. 달력/달력 캐릭터 초상화.png using Guid(5f5c382c968181c4496cfc084a49e71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d159a642de8254b00f5cfe7abadd93a') in 0.014323 seconds 
+  Time since last request: 0.000026 seconds.
+  path: Assets/Images/0. 임시/주인공 스프라이트/주인공S.png
+  artifactKey: Guid(309234acdb9e6bf4fab65335e88e07a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/0. 임시/주인공 스프라이트/주인공S.png using Guid(309234acdb9e6bf4fab65335e88e07a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd4d3c74099ef9ef2d61af9b31f87db8') in 0.093195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Images/0. 임시/주인공 스프라이트/주인공F1.png
+  artifactKey: Guid(bddbbd39ef3243745b9e4e1cc87797a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/0. 임시/주인공 스프라이트/주인공F1.png using Guid(bddbbd39ef3243745b9e4e1cc87797a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a02824b78fc2a22edf851ad1b231559') in 0.095891 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.849285 seconds.
+  path: Assets/Images/0. 임시/주인공 스프라이트/주인공B2.png
+  artifactKey: Guid(5376f1486ca803148991519c66f7da7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/0. 임시/주인공 스프라이트/주인공B2.png using Guid(5376f1486ca803148991519c66f7da7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54e7b712f114ad5f24aecef0c0d2c0b2') in 0.022728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Images/0. 임시/주인공 스프라이트/주인공S2.png
+  artifactKey: Guid(00b323a47484d8c46b84291832a7108d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/0. 임시/주인공 스프라이트/주인공S2.png using Guid(00b323a47484d8c46b84291832a7108d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d3a523c4bccfb11b131a87bb5c5ed38') in 0.013522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Images/0. 임시/주인공 스프라이트/주인공S.png
+  artifactKey: Guid(309234acdb9e6bf4fab65335e88e07a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/0. 임시/주인공 스프라이트/주인공S.png using Guid(309234acdb9e6bf4fab65335e88e07a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16f370ddeda45f4471336502407e27be') in 0.040315 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
