@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 73238983}
   m_Layer: 0
   m_Name: "\uB9E5\uC8FC"
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,13 +248,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73238981}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1716043461}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &73238983
 BoxCollider2D:
@@ -269,7 +269,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.2604976, y: 2.6018426}
+  m_Offset: {x: -3.3835807, y: 2.5413303}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -280,7 +280,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4984179, y: 1.3419166}
+  m_Size: {x: 1.5752954, y: 1.4629413}
   m_EdgeRadius: 0
 --- !u!1 &99383724
 GameObject:
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 99383726}
   m_Layer: 0
   m_Name: "\uC18C\uC8FC"
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,13 +306,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99383724}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1716043461}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &99383726
 BoxCollider2D:
@@ -327,7 +327,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3758583, y: 2.5859065}
+  m_Offset: {x: -0.45278513, y: 2.5339348}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -338,7 +338,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4616709, y: 1.3331958}
+  m_Size: {x: 1.507777, y: 1.4371389}
   m_EdgeRadius: 0
 --- !u!1 &124658134
 GameObject:
@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 358994265}
   m_Layer: 0
   m_Name: "\uC591\uC8FC"
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -683,7 +683,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1716043461}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &358994265
 BoxCollider2D:
@@ -698,7 +698,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -6.139823, y: 2.5815716}
+  m_Offset: {x: -6.2936764, y: 2.6672275}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -709,7 +709,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4375458, y: 1.3438464}
+  m_Size: {x: 1.3913403, y: 1.1725345}
   m_EdgeRadius: 0
 --- !u!1 &413649902
 GameObject:
@@ -1265,7 +1265,7 @@ GameObject:
   - component: {fileID: 706018594}
   m_Layer: 0
   m_Name: Main Ch Up
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1310,7 +1310,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: d3a9587d06e46734c9144d20b21faffe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1330,7 +1330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706018587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.18, y: -0.11, z: 0}
+  m_LocalPosition: {x: -1.18, y: -0.19, z: 0}
   m_LocalScale: {x: 0.2122, y: 0.2122, z: 0.2122}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1382,15 +1382,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 10.806922
+  m_Mass: 1.4179394
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!61 &706018594
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1404,7 +1404,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.3625214, y: -4.767241}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1415,7 +1415,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12, y: 20}
+  m_Size: {x: 3.734527, y: 8.4320135}
   m_EdgeRadius: 0
 --- !u!1 &751797788
 GameObject:
@@ -1541,7 +1541,7 @@ GameObject:
   - component: {fileID: 771402585}
   m_Layer: 0
   m_Name: "\uD0D5"
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1606,12 +1606,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771402582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.3168, y: 4.259, z: 9.929154}
-  m_LocalScale: {x: 0.67589754, y: 0.7997267, z: 0.67589754}
+  m_LocalPosition: {x: 7.3694, y: 4.2905, z: 9.929154}
+  m_LocalScale: {x: 0.7150996, y: 0.8296365, z: 0.67589754}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1716043461}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &771402585
 BoxCollider2D:
@@ -1626,7 +1626,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.077605605, y: -2.44572}
+  m_Offset: {x: 0.039901376, y: -1.6840602}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1637,7 +1637,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6541197, y: 0.9875922}
+  m_Size: {x: 0.91201246, y: 1.3879378}
   m_EdgeRadius: 0
 --- !u!1 &815304944
 GameObject:
@@ -1652,7 +1652,7 @@ GameObject:
   - component: {fileID: 815304947}
   m_Layer: 0
   m_Name: "\uD30C\uC778\uC560\uD50C"
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1717,12 +1717,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815304944}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.89, y: 4.12, z: 9.929154}
-  m_LocalScale: {x: 0.57491857, y: 0.57491857, z: 0.57491857}
+  m_LocalPosition: {x: 3.93, y: 4.1568, z: 9.929154}
+  m_LocalScale: {x: 0.63769966, y: 0.60981613, z: 0.57491857}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1716043461}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &815304947
 BoxCollider2D:
@@ -1737,7 +1737,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008014411, y: -3.0812955}
+  m_Offset: {x: -0.016111672, y: -2.0276852}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1748,7 +1748,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9772906, y: 1.3069429}
+  m_Size: {x: 1.0604881, y: 2.1617174}
   m_EdgeRadius: 0
 --- !u!1 &944130114
 GameObject:
@@ -1763,7 +1763,7 @@ GameObject:
   - component: {fileID: 944130117}
   m_Layer: 0
   m_Name: "\uACC4\uB780\uB9D0\uC774"
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1828,12 +1828,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944130114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.56, y: 3.83, z: 9.929154}
-  m_LocalScale: {x: 0.5533718, y: 0.5444956, z: 0.5160606}
+  m_LocalPosition: {x: 5.59, y: 3.8600001, z: 9.929154}
+  m_LocalScale: {x: 0.62005305, y: 0.58930755, z: 0.5160606}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1716043461}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &944130117
 BoxCollider2D:
@@ -1848,7 +1848,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07110754, y: -2.795288}
+  m_Offset: {x: 0.09324789, y: -1.63766}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1859,7 +1859,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8130932, y: 1.5233269}
+  m_Size: {x: 0.99616957, y: 1.985137}
   m_EdgeRadius: 0
 --- !u!1 &1024605469
 GameObject:
@@ -2141,7 +2141,7 @@ GameObject:
   - component: {fileID: 1716043461}
   m_Layer: 0
   m_Name: Menu
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2158,13 +2158,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 358994264}
   - {fileID: 944130116}
   - {fileID: 771402584}
   - {fileID: 815304946}
   - {fileID: 1869959200}
   - {fileID: 99383725}
   - {fileID: 73238982}
-  - {fileID: 358994264}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2483,7 +2483,7 @@ GameObject:
   - component: {fileID: 1869959201}
   m_Layer: 0
   m_Name: "\uAC10\uC790"
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2501,7 +2501,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1716043461}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1869959201
 BoxCollider2D:
@@ -2516,7 +2516,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3011911, y: -2.8505604}
+  m_Offset: {x: -0.19410567, y: -1.9134502}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2527,7 +2527,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0776176, y: 1.2280316}
+  m_Size: {x: 0.98494875, y: 1.7669344}
   m_EdgeRadius: 0
 --- !u!212 &1869959202
 SpriteRenderer:
