@@ -14,24 +14,22 @@ public class ControllerScript : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetAxisRaw("Horizontal") > 0f || Input.GetAxisRaw("Horizontal") < 0f) // Left, Right Move
-        {
-            transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
-            anim.SetBool("notmove", false);
-        }
-        else if (Input.GetAxisRaw("Vertical") > 0f || Input.GetAxisRaw("Vertical") < 0f) // Up, Down Move
-        {
-            transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f));
-            anim.SetBool("notmove", false);
-        }
-        else
-        {
-            anim.SetBool("notmove", true);
-        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+            anim.SetInteger("MoveCondition", 1);
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+            anim.SetInteger("MoveCondition", 2);
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+            anim.SetInteger("MoveCondition", 3);
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+            anim.SetInteger("MoveCondition", 4);
+        if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
+            anim.SetInteger("MoveCondition", 0);
 
-        // Animation Move X, Move Y
-        anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
-        anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
+        if (anim.GetInteger("MoveCondition") == 1 || anim.GetInteger("MoveCondition") == 2)
+            transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
+        else if (anim.GetInteger("MoveCondition") == 3 || anim.GetInteger("MoveCondition") == 4)
+            transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f));
+        // x = Horizontal, y = Vertical, z = 3D 일때만(앞뒤)
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
