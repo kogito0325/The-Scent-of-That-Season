@@ -7,6 +7,13 @@ TagManager:
   - Tile
   - OnTiled
   - Food
+  - Egg
+  - Soup
+  - Fruit
+  - French
+  - Drink1
+  - Drink2
+  - Drink3
   layers:
   - Default
   - TransparentFX

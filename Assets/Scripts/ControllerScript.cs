@@ -31,25 +31,7 @@ public class ControllerScript : MonoBehaviour
             transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f));
         // x = Horizontal, y = Vertical, z = 3D 일때만(앞뒤)
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.CompareTag("Food"))
-        {
-            GameObject thisFood = collision.gameObject;
-            thisFood.transform.localScale *= 4f/3f;
-        }        
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Food"))
-        {
-            GameObject thisFood = collision.gameObject;
-            thisFood.transform.localScale *= 3f/4f;
-        }
-    }
-
+ 
 }
 
 
