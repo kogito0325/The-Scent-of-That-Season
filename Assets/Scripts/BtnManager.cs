@@ -81,4 +81,9 @@ public class BtnManager : MonoBehaviour
         tetromino.GetComponent<TetroScript>().SwitchSize();
         gameObject.SetActive(false); // 블럭이 되면 이벤트 목록에서 제거
     }
+
+    public void CancelUI(GameObject go)
+    {
+        go.SetActive(false);
+    }
 }

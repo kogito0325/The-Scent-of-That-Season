@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public List<Dictionary<string, object>> chapterTable;
     public List<Dictionary<string, object>> nameTable;
 
+    public bool autoMode = false;
+    public float coolTime = 2f;
     public int contextIdx = 0;
     public int month = 3;
     public int loveSummer = 0;
@@ -73,6 +75,8 @@ public class GameManager : MonoBehaviour
         loveFall = PlayerPrefs.GetInt("loveFall", 0);
         loveWinter = PlayerPrefs.GetInt("loveWinter", 0);*/
         //money = PlayerPrefs.GetInt("money", 0);
+        autoMode = true;
+        coolTime = 0.5f;
 
         loveSummer = Random.Range(0, 100);
         loveFall= Random.Range(0, 100);

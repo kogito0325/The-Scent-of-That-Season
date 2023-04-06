@@ -42,6 +42,7 @@ public class ScriptReader : MonoBehaviour
     {   // 실제로 캐릭터 대사를 문자열로 받아 출력하는 코루틴 함수
         // NormalChat 에서 돌아감
 
+        bool autoMode = GameManager.Instance.autoMode;
         float textSpeed = 0.02f; // 텍스트 출력 속도
         CharacterName.text = narrator;
         writerText = "";
@@ -56,10 +57,20 @@ public class ScriptReader : MonoBehaviour
 
         while (true)
         {
-            if (Input.GetMouseButtonDown(0)) // 대사가 다 나오고 마우스 입력 대기
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || autoMode)
+            {
+                if (autoMode)
+                    yield return StartCoroutine(AutoCoolDown());// 대사가 다 나오고 마우스 입력 대기
                 break;
+            }
             yield return null;
         }
+    }
+
+    public IEnumerator AutoCoolDown()
+    {
+        float coolTime = GameManager.Instance.coolTime;
+        yield return new WaitForSeconds(coolTime);
     }
     public IEnumerator NormalChat(int startIdx, int endIdx)
     {   // 일반적인 대사를 출력하는 코루틴 함수
@@ -73,8 +84,8 @@ public class ScriptReader : MonoBehaviour
             int nameIdx = int.Parse(scriptTable[i]["CHARACTER"].ToString()); // 대사치는 캐릭터 이름 인덱스 불러오기
             int imageIdx = int.Parse(scriptTable[i]["IMAGE"].ToString()); // 대사치는 캐릭터 사진 인덱스 불러오기
             name = nameTable[nameIdx]["NAME"].ToString(); // 네임 테이블에서 인덱싱
-            action = scriptTable[i]["ACTION"].ToString();
-            content = scriptTable[i]["CONTENT"].ToString();
+            action = scriptTable[i]["ACTION"].ToString(); // 연출 불러오기
+            content = scriptTable[i]["CONTENT"].ToString(); // 대사 불러오기
 
             // 테이블에서 "주인공" 이면 저장된 이름으로 변경
             if (name.Equals("주인공"))
