@@ -61,12 +61,12 @@
     <Compile Include="Assets\Scripts\CSVReader.cs" />
     <Compile Include="Assets\Scripts\ScheduleManager.cs" />
     <Compile Include="Assets\Scripts\BtnManager.cs" />
+    <Compile Include="Assets\Scripts\ChatManager.cs" />
     <Compile Include="Assets\Scripts\CalenderScript.cs" />
     <Compile Include="Assets\Scripts\TetroScript.cs" />
     <Compile Include="Assets\Scripts\ControllerScript.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\TitleManager.cs" />
-    <Compile Include="Assets\Scripts\ChatManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

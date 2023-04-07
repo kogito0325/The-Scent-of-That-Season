@@ -14,9 +14,17 @@ public class ChatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape) && !settingMenu.activeSelf)
+        if (Input.GetKeyUp(KeyCode.Escape))
         {
-            settingMenu.SetActive(true);
+            if (settingMenu.activeSelf)
+                settingMenu.SetActive(false);
+            else
+                settingMenu.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            GameManager.Instance.autoMode = !GameManager.Instance.autoMode;
         }
     }
 }
