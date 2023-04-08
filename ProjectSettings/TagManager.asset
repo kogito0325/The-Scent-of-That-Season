@@ -14,6 +14,8 @@ TagManager:
   - Drink1
   - Drink2
   - Drink3
+  - CheckPoint
+  - sits
   layers:
   - Default
   - TransparentFX

@@ -1,26 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 using UnityEngine.UI;
 using System;
-using UnityEngine.U2D;
 
 public class ContentInventory : MonoBehaviour 
 { // Drink1: 剧林, Drink2: 钙林, Drink3: 家林
     string[] foods = { "Egg", "Soup", "Fruit", "French", "Drink1", "Drink2", "Drink3" };
     GameObject thisFood = null;
+    public Image[] images;
     // GameObject Helpbox;
 
     private void Start()
     {
-        
+        images[0].gameObject.SetActive(false);
+        images[1].gameObject.SetActive(false);
     }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F) && thisFood)
         {
             Debug.Log("got " + thisFood.name + '!');
+            if (thisFood.name[0] == 'D')
+            {
+                images[1].gameObject.SetActive(true);
+                images[1].sprite = thisFood.GetComponent<SpriteRenderer>().sprite;
+            }
+            else
+            {
+                images[0].gameObject.SetActive(true);
+                images[0].sprite = thisFood.GetComponent<SpriteRenderer>().sprite;
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
