@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,8 @@ public class GameManager : MonoBehaviour
     public List<Dictionary<string, object>> chapterTable;
     public List<Dictionary<string, object>> nameTable;
 
+    public ArrayList eventArr = new ArrayList();
+
     public bool autoMode = false;
     public float coolTime = 1f;
     public int contextIdx = 0;
@@ -22,6 +25,8 @@ public class GameManager : MonoBehaviour
     public int loveFall = 0;
     public int loveWinter = 0;
     public int money = 0;
+    public int albs = 0;
+    public bool eventTurn;
 
     void Awake()
     {
@@ -79,16 +84,18 @@ public class GameManager : MonoBehaviour
         //autoMode = true;
         //coolTime = 0.5f;
 
-        loveSummer = Random.Range(0, 100);
-        loveFall= Random.Range(0, 100);
-        loveWinter = Random.Range(0, 100);
+        loveSummer = 0;
+        loveFall= 0;
+        loveWinter = 0;
         contextIdx = 1;
-        month = Random.Range(3, 7);
-        money = Random.Range(0, 10000000);
+        month = 3;
+        money = 100000;
 
         scriptTable = CSVReader.Read("ScriptTable");
         chapterTable = CSVReader.Read("ChapterTable");
         nameTable = CSVReader.Read("CharacterNameTable");
+
+        eventTurn = true;
     }
 
     public void PauseGame()

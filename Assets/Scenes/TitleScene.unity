@@ -234,13 +234,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoMode: 0
-  coolTime: 2
+  coolTime: 1.75
   contextIdx: 0
   month: 3
   loveSummer: 0
   loveFall: 0
   loveWinter: 0
   money: 0
+  albs: 0
+  eventTurn: 0
 --- !u!4 &118088610
 Transform:
   m_ObjectHideFlags: 0
@@ -1695,7 +1697,6 @@ MonoBehaviour:
   choiceContent: 
   scriptReader: {fileID: 0}
   choiceTxt: {fileID: 0}
-  tetromino: {fileID: 0}
 --- !u!95 &1117579969
 Animator:
   serializedVersion: 5
@@ -2338,7 +2339,6 @@ MonoBehaviour:
   choiceContent: 0
   scriptReader: {fileID: 0}
   choiceTxt: {fileID: 0}
-  tetromino: {fileID: 0}
 --- !u!1 &1813740813
 GameObject:
   m_ObjectHideFlags: 0

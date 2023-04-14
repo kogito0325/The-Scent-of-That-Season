@@ -25,7 +25,6 @@ public class SuvChMoveScript : MonoBehaviour
     public GameObject foodBox;
     Vector3 startPos;
     Vector3 targetPos;
-    float timer = 0.0f;
     float speed = 5f;
     int rootIdx = 0;
 

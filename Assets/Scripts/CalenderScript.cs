@@ -8,6 +8,7 @@ public class CalenderScript : MonoBehaviour
 {
     public GameObject[] days;
     public Sprite[] monthImages;
+    public Text monthText;
 
     public int month;
     public SpriteRenderer monthImage;
@@ -50,6 +51,7 @@ public class CalenderScript : MonoBehaviour
             days[i].SetActive(true);
 
         monthImage.sprite = monthImages[month - 3];
+        monthText.text = month.ToString() + "¿ù";
     }
 
     public void LocateTetromino()
@@ -67,11 +69,16 @@ public class CalenderScript : MonoBehaviour
                 tileVec.GetComponent<Collider2D>().enabled = false;
             }
         }
-
+        if (tetromino.GetComponent<TetroScript>().eventNum == 0)
+            GameManager.Instance.albs++;
+        else
+            GameManager.Instance.eventArr.Add(tetromino.GetComponent<TetroScript>().eventNum);
         tempPosition /= length;
         tetromino.transform.position = tempPosition;
         tetromino.GetComponent<TetroScript>().SwitchSize();
         tetromino.name = "TestTetromino";
         tetromino.GetComponent<TetroScript>().enabled = false;
+
+        GameObject.Find("ScheduleManager").GetComponent<ScheduleManager>().tasks--;
     }
 }

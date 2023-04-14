@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using System;
+using Unity.VisualScripting;
 
 public class BtnManager : MonoBehaviour
 {
@@ -13,7 +14,6 @@ public class BtnManager : MonoBehaviour
     public string choiceContent; // 선택지 이름
     public ScriptReader scriptReader; // 스크립트 리더랑 상호작용 하기 위한 변수
     public Text choiceTxt; // 선택지 텍스트 담는 곳
-    public GameObject tetromino; // 이벤트 클릭하면 나오는 블럭
 
     public List<Dictionary<string, object>> scriptTable; // 스크립트 테이블
 
@@ -31,6 +31,8 @@ public class BtnManager : MonoBehaviour
     }
     public void StartGame()
     {   // 게임 시작 버튼 - 이름 입력 화면 로드
+        if (GameObject.Find("ScheduleManager").GetComponent<ScheduleManager>().tasks > 0)
+            return;
         SceneManager.LoadScene("InputScene");
     }
 
@@ -40,7 +42,7 @@ public class BtnManager : MonoBehaviour
     }
 
     public void EndGame()
-    {
+    {   // 게임 끝내는 버튼 - 게임 종료
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
@@ -53,12 +55,10 @@ public class BtnManager : MonoBehaviour
         // Null 이거나 비어 있으면 안됨
         // 공백문자로만 이루어져있어도 안됨
         if (string.IsNullOrEmpty(inputName.text) || string.IsNullOrWhiteSpace(inputName.text))
-            Debug.Log("이름을 제대로 입력하여 주세요.");
+            PlayerPrefs.SetString("name", "주안");
         else
-        {
             PlayerPrefs.SetString("name", inputName.text); // 컴터에 이름 저장
-            SceneManager.LoadScene("ChatScene"); // 대화창으로 이동
-        }
+        SceneManager.LoadScene("ChatScene"); // 대화창으로 이동
     }
 
     public void ChooseNum()
@@ -75,15 +75,8 @@ public class BtnManager : MonoBehaviour
             list.SetActive(false);
     }
 
-    public void GetTetromino()
-    {   // 이벤트 클릭하면 블럭 생성
-        tetromino = Instantiate(tetromino);
-        tetromino.GetComponent<TetroScript>().SwitchSize();
-        gameObject.SetActive(false); // 블럭이 되면 이벤트 목록에서 제거
-    }
-
     public void CancelUI(GameObject go)
-    {
+    {   // 인자로 받은 UI를 끄는 함수
         go.SetActive(false);
     }
 }

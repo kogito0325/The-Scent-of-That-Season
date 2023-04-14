@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScriptReader : MonoBehaviour
@@ -145,7 +146,7 @@ public class ScriptReader : MonoBehaviour
     IEnumerator EndProcess(int startIdx, int endIdx)
     {   // 챕터 끝을 알리고 진행하는 프로세스 함수
         GameManager.Instance.UpdateIdx(++endIdx);
-        GameManager.Instance.RestartGame();
+        SceneManager.LoadScene("ScheduleScene");
         yield break;
     }
 
