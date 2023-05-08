@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     public float coolTime;  // 자동 넘기기 간격 (단위: 초)
     [Header("텍스트 출력 속도 조절")][Range(0, 0.4f)]
     public float textSpeed;  // 텍스트 출력 속도
+    public float masterVol;  // 마스터 볼륨
+    public float bgmVol;  // 브금 볼륨
+    public float fxVol;  // 효과음 볼륨
 
     // 논리 변수
     public bool autoMode;  // 자동 넘기기 on off
@@ -47,7 +50,12 @@ public class GameManager : MonoBehaviour
 
     // 오브젝트형 변수
     public GameObject calendar;
+    public GameObject LoadPage;
+    public GameObject SettingPage;
+
+    // 오디오 변수
     public AudioSource bgmPlayer;
+    public AudioSource fxPlayer;
 
     // 브금 리스트
     public AudioClip[] bgms;
@@ -118,6 +126,10 @@ public class GameManager : MonoBehaviour
         coolTime = 1f;
         textSpeed = 0.05f;
 
+        masterVol = PlayerPrefs.GetFloat("mVol", 1f);
+        bgmVol = PlayerPrefs.GetFloat("bVol", .4f);
+        fxVol = PlayerPrefs.GetFloat("fVol", .4f);
+
         autoMode = false;
         doingEvent = false;
     }
@@ -154,8 +166,10 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
+        bgmPlayer.clip = bgms[0];
+        bgmPlayer.Play();
         SceneManager.LoadScene("TitleScene");
-        saveMode = true;
+        saveMode = false;
     }
 
     public void ResetGame()
@@ -194,6 +208,7 @@ public class GameManager : MonoBehaviour
 
     public void StopGame()
     {
+
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
@@ -232,6 +247,27 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("ContentScene");
     }
 
+    public void OpenLoadPage()
+    {
+        LoadPage.SetActive(true);
+    }
+
+    public void OpenSettingPage()
+    {
+        SettingPage.SetActive(true);
+    }
+
+    public void ClosePage()
+    {
+        SettingPage.SetActive(false);
+        LoadPage.SetActive(false);
+    }
+
+    public void ClosePage(GameObject page)
+    {
+        page.SetActive(false);
+    }
+
     public Color HexColor(int hexIdx)
     {   // 캐릭터별 색상값 가져오는 함수 (외부에서 호출)
         Color color;
@@ -264,8 +300,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void OrderingTask()
-        // 아무렇게나 배치한 일정 순서를 재배치하는 함수
-    {   // 일정을 하나만 넣었을 경우 그대로 반환
+    {   // 아무렇게나 배치한 일정 순서를 재배치하는 함수
+        // 일정을 하나만 넣었을 경우 그대로 반환
         if (!task.Contains(','))
             return;
 
@@ -314,5 +350,18 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         bgmPlayer.volume = originVol;
+    }
+
+    public void ChangeVol()
+    {
+        bgmPlayer.volume = bgmVol * masterVol;
+        fxPlayer.volume = fxVol * masterVol;
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetFloat("mVol", masterVol);
+        PlayerPrefs.SetFloat("bVol", bgmVol);
+        PlayerPrefs.SetFloat("fVol", fxVol);
     }
 }

@@ -87,7 +87,7 @@ public class CalenderScript : MonoBehaviour
     {
         GameObject tetromino = GameObject.Find("ScheduleManager").GetComponent<ScheduleManager>().nowTetro;
         TetroScript tetroScript = tetromino.GetComponent<TetroScript>();
-        Vector3 tempPosition = new Vector3(0, 0, 0);
+        Vector3 tempPosition;
         int length = 0;
         float minX, minY, maxX, maxY;
         minX = minY = maxX = maxY = 0;

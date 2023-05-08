@@ -11,13 +11,13 @@ D:\Unity\Editor\2021.3.16f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-D:/Unity/Dongseo Pub
+D:/Unity/The Scent of That Season
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61736
-Successfully changed project path to: D:/Unity/Dongseo Pub
-D:/Unity/Dongseo Pub
+54655
+Successfully changed project path to: D:/Unity/The Scent of That Season
+D:/Unity/The Scent of That Season
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,15 +47,15 @@ D:/Unity/Dongseo Pub
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [22408] Host "[IP] 192.168.135.49 [Port] 0 [Flags] 2 [Guid] 1390463746 [EditorId] 1390463746 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3IDOKRA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [19844] Host "[IP] 192.168.135.49 [Port] 0 [Flags] 2 [Guid] 2370174587 [EditorId] 2370174587 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3IDOKRA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [22408] Host "[IP] 192.168.135.49 [Port] 0 [Flags] 2 [Guid] 1390463746 [EditorId] 1390463746 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3IDOKRA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [19844] Host "[IP] 192.168.135.49 [Port] 0 [Flags] 2 [Guid] 2370174587 [EditorId] 2370174587 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3IDOKRA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 85.48 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2209.50 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
 [Subsystems] Discovering subsystems at path D:/Unity/Editor/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Unity/Dongseo Pub/Assets
+[Subsystems] Discovering subsystems at path D:/Unity/The Scent of That Season/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -67,297 +67,45 @@ Initialize mono
 Mono path[0] = 'D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56176
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56540
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: D:/Unity/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001974 seconds.
+Registered in 0.024255 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 92.27 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 73.53 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.654 seconds
+- Completed reload, in  1.543 seconds
 Domain Reload Profiling:
-	ReloadAssembly (655ms)
-		BeginReloadAssembly (79ms)
+	ReloadAssembly (1543ms)
+		BeginReloadAssembly (873ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (466ms)
-			LoadAssemblies (79ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (526ms)
+			LoadAssemblies (859ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (121ms)
+			SetupTypeCache (170ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (269ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (288ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (50ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (92ms)
+				InitializePlatformSupportModulesInManaged (60ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (74ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (86ms)
-				ProcessInitializeOnLoadMethodAttributes (39ms)
+				ProcessInitializeOnLoadAttributes (104ms)
+				ProcessInitializeOnLoadMethodAttributes (48ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003496 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Dongseo Pub\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Dongseo Pub\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 68.92 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.117 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1117ms)
-		BeginReloadAssembly (242ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (149ms)
-		EndReloadAssembly (782ms)
-			LoadAssemblies (106ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (215ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (66ms)
-			SetupLoadedEditorAssemblies (381ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (69ms)
-				BeforeProcessingInitializeOnLoad (69ms)
-				ProcessInitializeOnLoadAttributes (203ms)
-				ProcessInitializeOnLoadMethodAttributes (30ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
-Refreshing native plugins compatible for Editor in 1.27 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4066 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 38 unused Assets / (56.3 KB). Loaded Objects now: 4541.
-Memory consumption went from 164.6 MB to 164.5 MB.
-Total: 4.336000 ms (FindLiveObjects: 0.453700 ms CreateObjectMapping: 0.198800 ms MarkObjects: 3.554200 ms  DeleteObjects: 0.127200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 616649.886042 seconds.
-  path: Assets/Images/4. 대화/1. 지구하/효과/빠직1.png
-  artifactKey: Guid(5687e721d9607ff4490087ccd0bcc20a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/1. 지구하/효과/빠직1.png using Guid(5687e721d9607ff4490087ccd0bcc20a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a81820cebf054c8a58127af6980302cb') in 0.615453 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Images/5. 알바/손님1/남자2B2.png
-  artifactKey: Guid(a56179f42c5aa4141b70b8fc8d17f2ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/5. 알바/손님1/남자2B2.png using Guid(a56179f42c5aa4141b70b8fc8d17f2ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55adbb7d6250349ce18419be1b6b2f45') in 0.326649 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Images/5. 알바/손님1/남자2F2.png
-  artifactKey: Guid(832a055115e2f3648ac8161b2715e681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/5. 알바/손님1/남자2F2.png using Guid(832a055115e2f3648ac8161b2715e681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3710f4773005297dcda5997b7096cf80') in 0.307225 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Images/5. 알바/손님1/남자2S21.png
-  artifactKey: Guid(d443edbe4734bb3438c5f56ad990096a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/5. 알바/손님1/남자2S21.png using Guid(d443edbe4734bb3438c5f56ad990096a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bd75c5fae2e75d7f4a6fbc95acf2603') in 0.492805 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Images/4. 대화/1. 지구하/효과/홍조2.png
-  artifactKey: Guid(6295219ac9a45d446a3b96a531a9cae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/1. 지구하/효과/홍조2.png using Guid(6295219ac9a45d446a3b96a531a9cae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eeb54312a084cc1d925af9f154b5d8c') in 0.596463 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Images/4. 대화/1. 지구하/눈썹/눈썹3.png
-  artifactKey: Guid(396c45a359c9d9e479cb4d505d2d21f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/1. 지구하/눈썹/눈썹3.png using Guid(396c45a359c9d9e479cb4d505d2d21f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc8a2a2c446aaaee55896f0b6210dfd6') in 0.499237 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Images/5. 알바/손님1/남자2S1 1.png
-  artifactKey: Guid(ea0322f57c9bbdb429c5023a650d8547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/5. 알바/손님1/남자2S1 1.png using Guid(ea0322f57c9bbdb429c5023a650d8547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db6fbe36e7c5fa2f856c70b900a674b4') in 0.685756 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Images/4. 대화/3. 한서령/눈썹/눈썹3.png
-  artifactKey: Guid(84fb96095b43c0349a13de7fb458895c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/3. 한서령/눈썹/눈썹3.png using Guid(84fb96095b43c0349a13de7fb458895c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc152fb74a98b1ece920f01c400eba6d') in 0.605587 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/Images/4. 대화/3. 한서령/입/입8.png
-  artifactKey: Guid(66f21775a3b70044195f3f2e9aa42e10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/3. 한서령/입/입8.png using Guid(66f21775a3b70044195f3f2e9aa42e10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a269f54fa5fef9b680b2e0303573e1d8') in 0.301295 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Images/4. 대화/1. 지구하/눈썹/눈썹4.png
-  artifactKey: Guid(7d89a4bb60e524e4a8c762c013a29f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/1. 지구하/눈썹/눈썹4.png using Guid(7d89a4bb60e524e4a8c762c013a29f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d7c8d94cd7cb241e9e7a0dda40a334') in 0.430838 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Images/4. 대화/1. 지구하/효과/홍조5.png
-  artifactKey: Guid(07097f8851ddea5459e490a84dfc218c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/1. 지구하/효과/홍조5.png using Guid(07097f8851ddea5459e490a84dfc218c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96ced1d248aa93366a18df342fe8d184') in 0.472098 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/Images/4. 대화/3. 한서령/눈/눈3.png
-  artifactKey: Guid(c45cfee0a8d8cfe44a8fba51afc9a69a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/3. 한서령/눈/눈3.png using Guid(c45cfee0a8d8cfe44a8fba51afc9a69a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8932c61e6833ace00162878a314aa514') in 0.369785 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Images/4. 대화/2. 유가현/눈썹/눈썹2.png
-  artifactKey: Guid(9659ef8cb35d67f49aed41fbcd4478f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/2. 유가현/눈썹/눈썹2.png using Guid(9659ef8cb35d67f49aed41fbcd4478f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16d88da0ae352aa0f01b6a74f0510e54') in 0.403101 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Images/5. 알바/손님1/남자2S1.png
-  artifactKey: Guid(72857e8face4bd742ab2c5ab6359f566) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/5. 알바/손님1/남자2S1.png using Guid(72857e8face4bd742ab2c5ab6359f566) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '672abc8f488241ee8a51504d6f5bb523') in 0.390321 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Images/4. 대화/2. 유가현/눈/눈8.png
-  artifactKey: Guid(3f326a881bca86c4b90859568c87e9af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/2. 유가현/눈/눈8.png using Guid(3f326a881bca86c4b90859568c87e9af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac45fc58069264e2ccee0bd62d0ca637') in 0.608959 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/Images/6. 불러오기/불러오기 검은 화면.png
-  artifactKey: Guid(b5b0d8f5d92b7824aba8edbffd21467d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/6. 불러오기/불러오기 검은 화면.png using Guid(b5b0d8f5d92b7824aba8edbffd21467d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09a1bebaf5f96db9800674c3ae6091f3') in 0.689038 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Images/4. 대화/2. 유가현/눈/눈2.png
-  artifactKey: Guid(8fe447337a12fb54c8ef2297479b7e68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/2. 유가현/눈/눈2.png using Guid(8fe447337a12fb54c8ef2297479b7e68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7897290f6c08ac918ed5eab881e457d') in 0.387722 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Images/4. 대화/1. 지구하/효과/음영1.png
-  artifactKey: Guid(077dfe0c31bba3d4381da4b19cdade85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/1. 지구하/효과/음영1.png using Guid(077dfe0c31bba3d4381da4b19cdade85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '311943b2971844a0509955cbab7cb07d') in 0.541133 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/Images/4. 대화/3. 한서령/눈/눈6.png
-  artifactKey: Guid(beeccc23fefef23429e3f8c5906d8a5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/3. 한서령/눈/눈6.png using Guid(beeccc23fefef23429e3f8c5906d8a5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f795738c30386e220da3d70e1c72cdeb') in 0.387344 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Images/4. 대화/1. 지구하/눈/눈3.png
-  artifactKey: Guid(3875a90f63843c9458cd260ddc793be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/1. 지구하/눈/눈3.png using Guid(3875a90f63843c9458cd260ddc793be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ab14e8e26564cf4db4bde88cbb66520') in 0.523660 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Images/4. 대화/2. 유가현/입/입5.png
-  artifactKey: Guid(7ed1b3226acca8248bbe949f0e4b14d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/2. 유가현/입/입5.png using Guid(7ed1b3226acca8248bbe949f0e4b14d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '746ee5f5c1db10254f99d0808b6897dc') in 0.213107 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Images/4. 대화/2. 유가현/눈썹/눈썹8.png
-  artifactKey: Guid(1f649d837fe4df641a3867a7f7eb7aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/2. 유가현/눈썹/눈썹8.png using Guid(1f649d837fe4df641a3867a7f7eb7aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4e6cd2504357b0422d13c97f635e5a5') in 1.052200 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Images/6. 불러오기/불러오기 빈칸.png
-  artifactKey: Guid(aeffb70c8f8e80e448c3e30a5dd9d3a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/6. 불러오기/불러오기 빈칸.png using Guid(aeffb70c8f8e80e448c3e30a5dd9d3a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '954dc8f3a7b52ccdcbc5e3a839e07cfe') in 1.140899 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000066 seconds.
-  path: Assets/Images/4. 대화/1. 지구하/눈썹/눈썹5.png
-  artifactKey: Guid(3a117a6917f1cd5418b48ecb911f12cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/1. 지구하/눈썹/눈썹5.png using Guid(3a117a6917f1cd5418b48ecb911f12cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc526c596a22bd789d522aabde891417') in 0.824202 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Images/4. 대화/2. 유가현/노페이스_1.png
-  artifactKey: Guid(12b448c1972b2c9449d34078c3963bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/2. 유가현/노페이스_1.png using Guid(12b448c1972b2c9449d34078c3963bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa11a63a8a19b450e5620ca7d889a108') in 0.401059 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000064 seconds.
-  path: Assets/Images/5. 알바/손님3/남자1SS.png
-  artifactKey: Guid(cae409615632c8e4787212ef5930df6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/5. 알바/손님3/남자1SS.png using Guid(cae409615632c8e4787212ef5930df6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '152278af13a8fca99845c01923398852') in 0.436676 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000068 seconds.
-  path: Assets/Images/4. 대화/1. 지구하/눈썹/눈썹2.png
-  artifactKey: Guid(b02ea8978821bcb499647615fad9f8b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/1. 지구하/눈썹/눈썹2.png using Guid(b02ea8978821bcb499647615fad9f8b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd2aedcc9ab93add053f3ee1cb568c4a') in 0.777055 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000071 seconds.
-  path: Assets/Images/4. 대화/2. 유가현/효과/빠직1.png
-  artifactKey: Guid(9ff6fed80bccc8842a1f257449e2c006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/2. 유가현/효과/빠직1.png using Guid(9ff6fed80bccc8842a1f257449e2c006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31b1bc628e234a207a73058c2d1655dc') in 0.360993 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Images/4. 대화/1. 지구하/노페이스_1.png
-  artifactKey: Guid(63201ca3490d5a249a8fc923cebeb331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/1. 지구하/노페이스_1.png using Guid(63201ca3490d5a249a8fc923cebeb331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6741ecde8b55eab3d13bfa13fba453b1') in 0.414965 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000058 seconds.
-  path: Assets/Images/4. 대화/3. 한서령/효과/홍조4.png
-  artifactKey: Guid(9056375e22a4a5b4881a72e06af8c682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/3. 한서령/효과/홍조4.png using Guid(9056375e22a4a5b4881a72e06af8c682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b40ad09f49647aed1804c687de95618') in 0.552481 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000068 seconds.
-  path: Assets/Images/4. 대화/1. 지구하/입/입4.png
-  artifactKey: Guid(9596a30ae26be684f9bce00c158b7bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/4. 대화/1. 지구하/입/입4.png using Guid(9596a30ae26be684f9bce00c158b7bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f25aa31380be18b995116cb63091f79c') in 0.336591 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/Images/6. 불러오기/사진 확대 검은 배경.png
-  artifactKey: Guid(6ab75497439cce145aedac6715229f28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/6. 불러오기/사진 확대 검은 배경.png using Guid(6ab75497439cce145aedac6715229f28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f3f160c0292f07b29f4482e71996a0f') in 0.425276 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Registered in 0.187834 seconds.
+Android Extension - Scanning For ADB Devices 4379 ms

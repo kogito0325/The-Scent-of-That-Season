@@ -56,6 +56,11 @@ public class BtnManager : MonoBehaviour
         GameManager.Instance.LoadScheduleScene();
     }
 
+    public void StartTitle()
+    {
+        GameManager.Instance.RestartGame();
+    }
+
     public void EndGame()
     {   // 게임 끝내는 버튼 - 게임 종료
         GameManager.Instance.StopGame();
@@ -125,6 +130,26 @@ public class BtnManager : MonoBehaviour
         else
         {
             page.SetActive(true);
+        }
+    }
+
+    public void OpenSettingPage()
+    {
+        if (GameManager.Instance.SettingPage.activeSelf)
+            GameManager.Instance.ClosePage();
+        else
+            GameManager.Instance.OpenSettingPage();
+    }
+
+    public void OpenLoadPage()
+    {
+        if (GameManager.Instance.LoadPage.activeSelf)
+        {
+            GameManager.Instance.ClosePage();
+        }
+        else
+        {
+            GameManager.Instance.OpenLoadPage();
         }
     }
 

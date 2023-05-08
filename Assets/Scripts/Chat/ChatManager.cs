@@ -1,21 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChatManager : MonoBehaviour
 {
-    public GameObject settingMenu;
     public GameObject backLog;
     public GameObject backLogContent;
     public GameObject logPrefab;
     public GameObject allUI;
 
+    public Sprite[] autoImages;
+    public Image autoImage;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        settingMenu.SetActive(false);
         backLog.SetActive(false);
         allUI.SetActive(true);
+        autoImage.sprite = autoImages[GameManager.Instance.autoMode ? 0 : 1];
     }
 
     // Update is called once per frame
@@ -23,15 +27,16 @@ public class ChatManager : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            if (settingMenu.activeSelf)
-                settingMenu.SetActive(false);
+            if (GameManager.Instance.SettingPage.activeSelf)
+                GameManager.Instance.ClosePage();
             else
-                settingMenu.SetActive(true);
+                GameManager.Instance.OpenSettingPage();
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
             GameManager.Instance.autoMode = !GameManager.Instance.autoMode;
+            autoImage.sprite = autoImages[GameManager.Instance.autoMode ? 0 : 1];
         }
 
         if (Input.GetKeyDown(KeyCode.L))
@@ -41,6 +46,7 @@ public class ChatManager : MonoBehaviour
             else
                 backLog.SetActive(true);
         }
+
         if (Input.GetMouseButtonDown(1))
         {
             if (allUI.activeSelf)
@@ -65,6 +71,6 @@ public class ChatManager : MonoBehaviour
 
     private bool CheckPause()
     {
-        return settingMenu.activeSelf || backLog.activeSelf || !allUI.activeSelf;
+        return GameManager.Instance.SettingPage.activeSelf || backLog.activeSelf || !allUI.activeSelf;
     }
 }

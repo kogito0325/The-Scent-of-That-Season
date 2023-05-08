@@ -29,6 +29,7 @@ public class ScheduleManager : MonoBehaviour
         loveWinter = GameManager.Instance.loveWinter;
 
         month = GameManager.Instance.month;
+        GameManager.Instance.saveMode = true;
     }
 
     private void Start()
@@ -58,7 +59,7 @@ public class ScheduleManager : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            GameManager.Instance.RestartGame();
+            GameManager.Instance.OpenSettingPage();
         }
     }
 
@@ -89,18 +90,20 @@ public class ScheduleManager : MonoBehaviour
         UpdateLoves();
         UpdateMoney();
 
-        // 임시 알바 이벤트 생성
+        // 알바 이벤트 생성
         var instBox = Instantiate(eventBox);
         instBox.GetComponent<TetroBtn>().InitBlock(0);
         instBox.transform.SetParent(GameObject.Find("Content").transform);
 
-        // 임시 시나리오 이벤트 생성
+        // 시나리오 이벤트 생성
         for (int i = 1; int.Parse(GameManager.Instance.chapterTable[i]["MONTH"].ToString()) == GameManager.Instance.month; i++)
         {
             instBox = Instantiate(eventBox);
             instBox.GetComponent<TetroBtn>().InitBlock(i);
             instBox.transform.SetParent(GameObject.Find("Content").transform);
         }
+
+        // 이벤트 리스트 닫기
         listPanel.SetActive(false);
     }
 

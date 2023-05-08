@@ -28,6 +28,12 @@ public class TitleManager : MonoBehaviour
         fadeCount = (float)fadeSpeed / 10000;  // 수치 조정(그대로 쓰면 너무 빠름)
     }
 
+    private void Start()
+    {
+        GameManager.Instance.ClosePage();
+        GameManager.Instance.saveMode = false;
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && !btnOn)

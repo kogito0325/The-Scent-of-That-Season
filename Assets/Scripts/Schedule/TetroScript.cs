@@ -65,15 +65,7 @@ public class TetroScript : MonoBehaviour
 
     public void SwitchSize()
     {   // 사이즈 스위칭(버튼 클릭 시 작아지고 배치 시 (원래 크기로) 커짐
-        if (!tiny)
-        {
-            tiny = true;
-            transform.localScale = transform.localScale * 0.8f;
-        }
-        else if (tiny)
-        {
-            tiny = false;
-            transform.localScale = beforeSize;
-        }
+        transform.localScale = tiny ? beforeSize : transform.localScale * 0.8f;
+        tiny = !tiny;
     }
 }

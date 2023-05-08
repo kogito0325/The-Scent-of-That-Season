@@ -1,8 +1,5 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -254,18 +251,22 @@ public class ScriptReader : MonoBehaviour
     IEnumerator ActionProcess(string action, int nowIdx)
     {   // 연출을 받고 처리하는 프로세스 함수
         // action 은 NormalChat()에서 제공 받는 한글 문자열 (엑셀 {ACTION})
-        float cooltime = GameManager.Instance.coolTime;
         if (action == "페이드 아웃")
-            emptyBackgroundImage.CrossFadeAlpha(0f, cooltime, true);
+        {
+            emptyBackgroundImage.CrossFadeAlpha(0f, 1f, true);
+            yield return new WaitForSeconds(1f);
+        }
         else if (action == "페이드 인")
         {
             // 페이드 인 할 때 배경이 바뀐다면 스프라이트 변경
             emptyBackgroundImage.sprite = backgroundImages[int.Parse(scriptTable[nowIdx]["BACKGROUND"].ToString())];
-            emptyBackgroundImage.CrossFadeAlpha(1f, cooltime, true);
+            emptyBackgroundImage.CrossFadeAlpha(1f, 1f, true);
+            yield return new WaitForSeconds(1f);
         }
         else if (action == "화면 흔들림")
         {
-            StartCoroutine(ShakeCamera(20, cooltime));
+            StartCoroutine(ShakeCamera(20, 1f));
+            yield return new WaitForSeconds(1f);
         }
         else if (action == "화면 확대 1")
         {

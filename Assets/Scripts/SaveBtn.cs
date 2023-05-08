@@ -38,7 +38,11 @@ public class SaveBtn : MonoBehaviour
 
     public void LoadData(int num)
     {
+        if (DataManager.Instance.FindPath(saveIdx) == null)
+            return;
         GameManager.Instance.InitGame(num);
+        GameManager.Instance.ClosePage();
+        GameManager.Instance.LoadScheduleScene();
     }
 
     IEnumerator InitSaveBtn()

@@ -51,6 +51,7 @@ public class DataManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+
         path = Application.persistentDataPath + "/";
     }
 
@@ -100,7 +101,11 @@ public class DataManager : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         foreach (var p in Directory.GetFiles(path, "*"))
+        {
+            if (p[^3..] == "log")
+                continue;
             File.Delete(p);
+        }
     }
 
     public void LoadData(int num=0)
