@@ -24,10 +24,20 @@ public class SaveBtn : MonoBehaviour
 
     public void PushBtn()
     {
+        GameManager.Instance.saveIdx = saveIdx;
         if (GameManager.Instance.saveMode)
-            SaveData(saveIdx);
+        {
+            if (DataManager.Instance.FindPath(saveIdx) == null)
+                SaveData(saveIdx);
+            else
+                GameManager.Instance.CheckUI("Save");
+        }
         else
-            LoadData(saveIdx);
+        {
+            if (DataManager.Instance.FindPath(saveIdx) == null)
+                return;
+            GameManager.Instance.CheckUI("Load");
+        }
     }
 
     public void SaveData(int num)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     public int loveFall;  // 유가현 호감도
     public int loveWinter;  // 한서령 호감도
     public int money;  // 보유 자산
+    public int saveIdx;  // 선택한 저장 / 로드 슬롯 인덱스
 
     // 실수형 변수
     public float coolTime;  // 자동 넘기기 간격 (단위: 초)
@@ -49,9 +51,16 @@ public class GameManager : MonoBehaviour
     public string[] pColors;
 
     // 오브젝트형 변수
-    public GameObject calendar;
-    public GameObject LoadPage;
-    public GameObject SettingPage;
+    public GameObject calendar;  // 캘린더
+    public GameObject LoadPage;  // 세이브 앤 로드 페이지
+    public GameObject galleryPage;
+    public GameObject SettingPage;  // 설정 페이지
+
+    // 확인 팝업
+    public GameObject SaveCheckPage;
+    public GameObject LoadCheckPage;
+    public GameObject TitleCheckPage;
+    public GameObject StartCheckPage;
 
     // 오디오 변수
     public AudioSource bgmPlayer;
@@ -59,6 +68,7 @@ public class GameManager : MonoBehaviour
 
     // 브금 리스트
     public AudioClip[] bgms;
+
 
     void Awake()
     {
@@ -92,6 +102,37 @@ public class GameManager : MonoBehaviour
                 return null;
             }
             return instance;
+        }
+    }
+
+    private void Update()
+    {   // 수준별 메뉴 닫기 구현
+        // ESC 눌렀을 때
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {   
+            // 1순위 - 만약 확인 창이 열려 있을 경우 닫음.
+            if (SaveCheckPage.activeSelf
+                || LoadCheckPage.activeSelf
+                || TitleCheckPage.activeSelf
+                || StartCheckPage.activeSelf
+                )
+            {
+                ClosePage(SaveCheckPage);
+                ClosePage(LoadCheckPage);
+                ClosePage(TitleCheckPage);
+                ClosePage(StartCheckPage);
+                return;
+            }
+
+            // 2순위 - 다른 페이지가 열려 있을 경우 닫음.
+            if (LoadPage.activeSelf || SettingPage.activeSelf || galleryPage.activeSelf)
+            {
+                ClosePage();
+                return;
+            }
+
+            // 3 순위 - 아무 페이지도 안열려 있으면 설정 창을 엶.
+            OpenSettingPage();
         }
     }
 
@@ -216,16 +257,11 @@ public class GameManager : MonoBehaviour
 #endif
     }
 
-    public AsyncOperation LoadChatScene()
+    public void LoadChatScene()
     {
         bgmPlayer.clip = bgms[1];
         bgmPlayer.Play();
-        return SceneManager.LoadSceneAsync("ChatScene");
-    }
-
-    public void LoadLoadingScene()
-    {
-        SceneManager.LoadScene("LoadingScene");
+        SceneManager.LoadSceneAsync("ChatScene");
     }
 
     public void LoadScheduleScene()
@@ -257,10 +293,16 @@ public class GameManager : MonoBehaviour
         SettingPage.SetActive(true);
     }
 
+    public void OpenGalleryPage()
+    {
+        galleryPage.SetActive(true);
+    }
+
     public void ClosePage()
     {
         SettingPage.SetActive(false);
         LoadPage.SetActive(false);
+        galleryPage.SetActive(false);
     }
 
     public void ClosePage(GameObject page)
@@ -356,6 +398,22 @@ public class GameManager : MonoBehaviour
     {
         bgmPlayer.volume = bgmVol * masterVol;
         fxPlayer.volume = fxVol * masterVol;
+    }
+
+    public void CheckUI(string mode)
+    {
+        LoadCheckPage.SetActive(false);
+        SaveCheckPage.SetActive(false);
+        TitleCheckPage.SetActive(false);
+        StartCheckPage.SetActive(false);
+        if (mode == "Load")
+            LoadCheckPage.SetActive(true);
+        else if (mode == "Save")
+            SaveCheckPage.SetActive(true);
+        else if (mode == "Title")
+            TitleCheckPage.SetActive(true);
+        else if (mode == "Start")
+            StartCheckPage.SetActive(true);
     }
 
     private void OnApplicationQuit()

@@ -27,7 +27,7 @@ public class BtnManager : MonoBehaviour
         }
     }
     public void StartGame()
-    {   // 게임 시작 버튼 - 이름 입력 화면 로드
+    {   // 일정 시작 버튼
         if (GameManager.Instance.task == "")
             return;
         GameManager.Instance.calendar = GameObject.Find("ScheduleManager").GetComponent<ScheduleManager>().calendar;
@@ -79,8 +79,21 @@ public class BtnManager : MonoBehaviour
             GameManager.Instance.playerName = "주안";
         else
             GameManager.Instance.playerName = inputName.text;  // 컴터에 이름 저장
-        GameManager.Instance.LoadLoadingScene(); // 대화창으로 이동
+        GameManager.Instance.LoadChatScene(); // 대화창으로 이동
     }
+
+    public void DecideSave()
+    {
+        var saveBtn = GameObject.Find(GameManager.Instance.saveIdx.ToString("00"));
+        saveBtn.GetComponent<SaveBtn>().SaveData(int.Parse(saveBtn.name));
+    }
+
+    public void DecideLoad()
+    {
+        var saveBtn = GameObject.Find("DataBox_" + GameManager.Instance.saveIdx.ToString("00"));
+        saveBtn.GetComponent<SaveBtn>().LoadData(int.Parse(saveBtn.name[^2..]));
+    }
+
 
     public void ChooseNum()
     {   // 선택지 버튼 - ScriptReader로 클릭한 변수 전달
@@ -121,16 +134,12 @@ public class BtnManager : MonoBehaviour
         GameManager.Instance.paused = false;
     }
 
-    public void OpenPage(GameObject page)
+    public void OpenGalleryPage()
     {
-        if (page.activeSelf)
-        {
-            page.SetActive(false);
-        }
+        if (GameManager.Instance.galleryPage.activeSelf)
+            GameManager.Instance.ClosePage();
         else
-        {
-            page.SetActive(true);
-        }
+            GameManager.Instance.OpenGalleryPage();
     }
 
     public void OpenSettingPage()
@@ -144,13 +153,21 @@ public class BtnManager : MonoBehaviour
     public void OpenLoadPage()
     {
         if (GameManager.Instance.LoadPage.activeSelf)
-        {
             GameManager.Instance.ClosePage();
-        }
         else
-        {
             GameManager.Instance.OpenLoadPage();
-        }
+    }
+    public void OpenTitleCheckPage()
+    {
+        GameManager.Instance.CheckUI("Title");
+    }
+
+    public void OpenStartCheckPage()
+    {
+        if (GameManager.Instance.doingEvent)
+            GameManager.Instance.LoadChatScene();
+        else
+            GameManager.Instance.CheckUI("Start");
     }
 
     public void ResetTetroAll()

@@ -55,14 +55,6 @@ public class ScheduleManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            GameManager.Instance.OpenSettingPage();
-        }
-    }
-
     private void UpdateLoveGazes()
     {   // 호감도 게이지 갱신
         loveGazes[0].fillAmount = (float)loveSummer / 100;

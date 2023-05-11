@@ -67,16 +67,15 @@
     <Compile Include="Assets\Scripts\Chat\ChatManager.cs" />
     <Compile Include="Assets\Scripts\Schedule\CalenderScript.cs" />
     <Compile Include="Assets\Scripts\Chat\ChatCharacter.cs" />
+    <Compile Include="Assets\Scripts\SliderScript.cs" />
     <Compile Include="Assets\Scripts\DataManager.cs" />
     <Compile Include="Assets\Scripts\Schedule\TetroScript.cs" />
     <Compile Include="Assets\Scripts\Content\SuvChMoveScript.cs" />
     <Compile Include="Assets\Scripts\Content\ControllerScript.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\LoadingScript.cs" />
     <Compile Include="Assets\Scripts\TitleManager.cs" />
     <Compile Include="Assets\Scripts\Schedule\TetroBtn.cs" />
     <Compile Include="Assets\Scripts\Chat\LogScript.cs" />
-    <Compile Include="Assets\Scripts\SliderScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BlurShader.shader" />

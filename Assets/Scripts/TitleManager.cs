@@ -17,6 +17,7 @@ public class TitleManager : MonoBehaviour
     bool btnOn;  // 클릭 상태(F:디폴트, T:클릭 후)
     float fadeCount;  // UI 페이드 인 속도
     public CanvasGroup canvas;  // UI캔버스 오브젝트(Canvas)
+    public GameObject galleryPage;
 
     [Header("페이드 인 속도 조절")]
     [SerializeField][Range(1, 1000)] int fadeSpeed;
@@ -40,6 +41,11 @@ public class TitleManager : MonoBehaviour
         {
             btnOn = true;
             StartCoroutine(FadeIn());
+        }
+
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            GameManager.Instance.ClosePage(galleryPage);
         }
     }
 
