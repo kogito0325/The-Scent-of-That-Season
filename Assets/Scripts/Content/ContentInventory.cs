@@ -34,6 +34,14 @@ public class ContentInventory : MonoBehaviour
                 images[0].sprite = thisFood.GetComponent<SpriteRenderer>().sprite;
             }
         }
+
+        if (life <= 0)
+        {
+            GameManager.Instance.PopTask();
+            GameManager.Instance.CheckNextMonth();
+            GameManager.Instance.LoadScheduleScene();
+            Destroy(this.gameObject);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

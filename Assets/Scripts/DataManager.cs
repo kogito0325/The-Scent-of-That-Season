@@ -19,13 +19,7 @@ public class Data
     public int loveWinter = 0;  // 한서령 호감도
     public int money = 0;  // 보유 자산
 
-    // 실수형 변수
-    public float coolTime = 1f;  // 자동 넘기기 간격 (단위: 초)
-    public float textSpeed = 0.05f;  // 텍스트 출력 속도
-
     // 논리 변수
-    public bool autoMode = false;  // 자동 넘기기 on off
-    public bool eventTurn = false;  // 이벤트 차례인지 알바 차례인지 구분하는 변수
     public bool doingEvent = false;  // 일정 중인지 구분하는 변수
 
 }

@@ -290,19 +290,8 @@ public class SuvChMoveScript : MonoBehaviour
         yield return StartCoroutine(Move(transform.position, thisRoot[1].position));
         yield return StartCoroutine(Move(transform.position, transform.position + new Vector3(0, -10, 0)));
 
-        Destroy(gameObject);
-    }
-
-    private void OnDestroy()
-    {
         contentManager.checkList[--rootIdx] = false;
-        if (player.life == 0)
-        {
-            player.life--;
-            GameManager.Instance.PopTask();
-            GameManager.Instance.CheckNextMonth();
-            SceneManager.LoadScene("ScheduleScene");
-        }
+        Destroy(gameObject);
     }
 
     private void OnTriggerStay2D(Collider2D collision)

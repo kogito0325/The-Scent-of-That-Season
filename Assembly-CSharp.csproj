@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\TitleManager.cs" />
     <Compile Include="Assets\Scripts\Schedule\TetroBtn.cs" />
     <Compile Include="Assets\Scripts\Chat\LogScript.cs" />
+    <Compile Include="Assets\Scripts\FaceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BlurShader.shader" />

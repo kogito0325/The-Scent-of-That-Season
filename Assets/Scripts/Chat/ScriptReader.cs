@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -205,8 +206,10 @@ public class ScriptReader : MonoBehaviour
             var bgmIdx = int.Parse(scriptTable[nowIdx]["BGM"].ToString());
             if (bgmIdx == 0)
                 GameManager.Instance.bgmPlayer.mute = true;
-            else if (bgmIdx == 1)
+            else if (bgmIdx > 0)
             {
+                if (Array.IndexOf(GameManager.Instance.bgms, GameManager.Instance.bgmPlayer.clip) != bgmIdx)
+                    GameManager.Instance.bgmPlayer.clip = GameManager.Instance.bgms[bgmIdx];
                 GameManager.Instance.bgmPlayer.mute = false;
                 StartCoroutine(GameManager.Instance.SoundFadeIn());
             }
@@ -343,20 +346,21 @@ public class ScriptReader : MonoBehaviour
     IEnumerator ShaderControl()
     {
         Material blurMtr = shaderEffect.GetComponent<CanvasRenderer>().GetMaterial();
+        float shaderTimeScale = 20f;
         while (true)
         {
-            for (float i = 0; i < 20; i += 1f)
+            for (float i = 0; i < shaderTimeScale; i += shaderTimeScale * Time.deltaTime)
             {
                 blurMtr.SetFloat("_Radius", i);
                 yield return null;
             }
 
-            for (float i = 20; i > 0; i -= 1f)
+            for (float i = shaderTimeScale; i > 0; i -= shaderTimeScale * Time.deltaTime)
             {
                 blurMtr.SetFloat("_Radius", i);
                 yield return null;
             }
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(1f);
         }
     }
 

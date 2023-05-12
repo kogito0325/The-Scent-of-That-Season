@@ -1951,13 +1951,13 @@ MonoBehaviour:
   task: 0
   pColors: []
   calendar: {fileID: 0}
-  LoadPage: {fileID: 1264866895}
+  settingPage: {fileID: 1106768523}
+  loadPage: {fileID: 1264866895}
   galleryPage: {fileID: 1773405260}
-  SettingPage: {fileID: 1106768523}
-  SaveCheckPage: {fileID: 165041363}
-  LoadCheckPage: {fileID: 806602404}
-  TitleCheckPage: {fileID: 488555963}
-  StartCheckPage: {fileID: 22260424}
+  saveCheckPage: {fileID: 165041363}
+  loadCheckPage: {fileID: 806602404}
+  titleCheckPage: {fileID: 488555963}
+  startCheckPage: {fileID: 22260424}
   bgmPlayer: {fileID: 118088611}
   fxPlayer: {fileID: 1706025138}
   bgms:
@@ -4586,7 +4586,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 231903161}
         m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: OpenPage
+        m_MethodName: CancelUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1773405260}
@@ -4857,7 +4857,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 238147014}
         m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: OpenPage
+        m_MethodName: CancelUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1264866895}
@@ -18129,7 +18129,7 @@ RectTransform:
   - {fileID: 994860127}
   - {fileID: 1290946220}
   m_Father: {fileID: 2075970280}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19811,7 +19811,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1163019035}
         m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: OpenPage
+        m_MethodName: CancelUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1106768523}
@@ -21204,7 +21204,7 @@ RectTransform:
   - {fileID: 1044347864}
   - {fileID: 1939882233}
   m_Father: {fileID: 2075970280}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -29236,7 +29236,7 @@ RectTransform:
   - {fileID: 666373002}
   - {fileID: 129755684}
   m_Father: {fileID: 2075970280}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -34196,9 +34196,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1106768524}
   - {fileID: 1264866896}
   - {fileID: 1773405261}
-  - {fileID: 1106768524}
   - {fileID: 165041364}
   - {fileID: 806602405}
   - {fileID: 488555964}

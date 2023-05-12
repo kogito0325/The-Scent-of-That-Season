@@ -41,6 +41,8 @@ public class TetroScript : MonoBehaviour
         {   // 만약 필요한 칸 수와 현재 칸 수가 같다면 배치
             GameObject.Find("Calendar").GetComponent<CalenderScript>().LocateTetromino();
         }
+        if (Input.GetMouseButtonDown(1))
+            transform.Rotate(new Vector3(0, 0, -90));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

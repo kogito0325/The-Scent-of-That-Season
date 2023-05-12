@@ -42,11 +42,6 @@ public class TitleManager : MonoBehaviour
             btnOn = true;
             StartCoroutine(FadeIn());
         }
-
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            GameManager.Instance.ClosePage(galleryPage);
-        }
     }
 
     IEnumerator FadeIn()

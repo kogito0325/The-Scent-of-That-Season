@@ -25,14 +25,6 @@ public class ChatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            if (GameManager.Instance.SettingPage.activeSelf)
-                GameManager.Instance.ClosePage();
-            else
-                GameManager.Instance.OpenSettingPage();
-        }
-
         if (Input.GetKeyDown(KeyCode.A))
         {
             GameManager.Instance.autoMode = !GameManager.Instance.autoMode;
@@ -71,6 +63,6 @@ public class ChatManager : MonoBehaviour
 
     private bool CheckPause()
     {
-        return GameManager.Instance.SettingPage.activeSelf || backLog.activeSelf || !allUI.activeSelf;
+        return GameManager.Instance.settingPage.activeSelf || backLog.activeSelf || !allUI.activeSelf;
     }
 }

@@ -30,17 +30,22 @@ public class BtnManager : MonoBehaviour
     {   // 일정 시작 버튼
         if (GameManager.Instance.task == "")
             return;
+        if (!GameManager.Instance.doingEvent)
+        {
+            GameManager.Instance.doingEvent = true;
+            GameManager.Instance.OrderingTask();
+        }
         GameManager.Instance.calendar = GameObject.Find("ScheduleManager").GetComponent<ScheduleManager>().calendar;
         DontDestroyOnLoad(GameManager.Instance.calendar);
         GameManager.Instance.calendar.SetActive(false);
-        GameManager.Instance.doingEvent = true;
-        GameManager.Instance.OrderingTask();
-        int eventNum = int.Parse(GameManager.Instance.task.Split(',')[0]);
-        GameManager.Instance.contextIdx = 
-            int.Parse(GameManager.Instance.chapterTable[eventNum]["START_POINT"].ToString());
-        if (eventNum > 0)
+
+        int eventNum = GameManager.Instance.ReturnFirstTask();
+        Debug.Log(eventNum);
+        
+        if (eventNum != 0)
         {
-            if (eventNum == 1)
+            GameManager.Instance.contextIdx = int.Parse(GameManager.Instance.chapterTable[eventNum]["START_POINT"].ToString());
+            if (GameManager.Instance.contextIdx == 1)
                 GameManager.Instance.LoadInputScene();
             else
                 GameManager.Instance.LoadChatScene();
@@ -84,8 +89,8 @@ public class BtnManager : MonoBehaviour
 
     public void DecideSave()
     {
-        var saveBtn = GameObject.Find(GameManager.Instance.saveIdx.ToString("00"));
-        saveBtn.GetComponent<SaveBtn>().SaveData(int.Parse(saveBtn.name));
+        var saveBtn = GameObject.Find("DataBox_" + GameManager.Instance.saveIdx.ToString("00"));
+        saveBtn.GetComponent<SaveBtn>().SaveData(int.Parse(saveBtn.name[^2..]));
     }
 
     public void DecideLoad()
@@ -144,7 +149,7 @@ public class BtnManager : MonoBehaviour
 
     public void OpenSettingPage()
     {
-        if (GameManager.Instance.SettingPage.activeSelf)
+        if (GameManager.Instance.settingPage.activeSelf)
             GameManager.Instance.ClosePage();
         else
             GameManager.Instance.OpenSettingPage();
@@ -152,7 +157,7 @@ public class BtnManager : MonoBehaviour
 
     public void OpenLoadPage()
     {
-        if (GameManager.Instance.LoadPage.activeSelf)
+        if (GameManager.Instance.loadPage.activeSelf)
             GameManager.Instance.ClosePage();
         else
             GameManager.Instance.OpenLoadPage();
@@ -165,7 +170,7 @@ public class BtnManager : MonoBehaviour
     public void OpenStartCheckPage()
     {
         if (GameManager.Instance.doingEvent)
-            GameManager.Instance.LoadChatScene();
+            StartGame();
         else
             GameManager.Instance.CheckUI("Start");
     }

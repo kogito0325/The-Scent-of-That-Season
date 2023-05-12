@@ -52,15 +52,15 @@ public class GameManager : MonoBehaviour
 
     // 오브젝트형 변수
     public GameObject calendar;  // 캘린더
-    public GameObject LoadPage;  // 세이브 앤 로드 페이지
+    public GameObject settingPage;  // 설정 페이지
+    public GameObject loadPage;  // 세이브 앤 로드 페이지
     public GameObject galleryPage;
-    public GameObject SettingPage;  // 설정 페이지
 
     // 확인 팝업
-    public GameObject SaveCheckPage;
-    public GameObject LoadCheckPage;
-    public GameObject TitleCheckPage;
-    public GameObject StartCheckPage;
+    public GameObject saveCheckPage;
+    public GameObject loadCheckPage;
+    public GameObject titleCheckPage;
+    public GameObject startCheckPage;
 
     // 오디오 변수
     public AudioSource bgmPlayer;
@@ -111,21 +111,21 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape))
         {   
             // 1순위 - 만약 확인 창이 열려 있을 경우 닫음.
-            if (SaveCheckPage.activeSelf
-                || LoadCheckPage.activeSelf
-                || TitleCheckPage.activeSelf
-                || StartCheckPage.activeSelf
+            if (saveCheckPage.activeSelf
+                || loadCheckPage.activeSelf
+                || titleCheckPage.activeSelf
+                || startCheckPage.activeSelf
                 )
             {
-                ClosePage(SaveCheckPage);
-                ClosePage(LoadCheckPage);
-                ClosePage(TitleCheckPage);
-                ClosePage(StartCheckPage);
+                ClosePage(saveCheckPage);
+                ClosePage(loadCheckPage);
+                ClosePage(titleCheckPage);
+                ClosePage(startCheckPage);
                 return;
             }
 
             // 2순위 - 다른 페이지가 열려 있을 경우 닫음.
-            if (LoadPage.activeSelf || SettingPage.activeSelf || galleryPage.activeSelf)
+            if (loadPage.activeSelf || settingPage.activeSelf || galleryPage.activeSelf)
             {
                 ClosePage();
                 return;
@@ -164,15 +164,17 @@ public class GameManager : MonoBehaviour
         loveWinter = 0;
         money = 0;
 
-        coolTime = 1f;
-        textSpeed = 0.05f;
+        coolTime = PlayerPrefs.GetFloat("autoSpd", 1f);
+        textSpeed = PlayerPrefs.GetFloat("textSpd", 0.05f);
 
         masterVol = PlayerPrefs.GetFloat("mVol", 1f);
         bgmVol = PlayerPrefs.GetFloat("bVol", .4f);
         fxVol = PlayerPrefs.GetFloat("fVol", .4f);
 
-        autoMode = false;
+        autoMode = PlayerPrefs.GetInt("autoMod", 0) > 0 ? true : false;
         doingEvent = false;
+
+        ChangeVol();
     }
 
     public void InitGame(int num=0)
@@ -193,10 +195,6 @@ public class GameManager : MonoBehaviour
         money = DataManager.Instance.nowData.money;
 
         doingEvent = DataManager.Instance.nowData.doingEvent;
-
-        coolTime = DataManager.Instance.nowData.coolTime;
-        textSpeed = DataManager.Instance.nowData.textSpeed;
-        autoMode = DataManager.Instance.nowData.autoMode;
 
     }
 
@@ -236,12 +234,7 @@ public class GameManager : MonoBehaviour
         DataManager.Instance.nowData.loveWinter = loveWinter;
         DataManager.Instance.nowData.money = money;
 
-        // 실수형 변수
-        DataManager.Instance.nowData.coolTime = coolTime;
-        DataManager.Instance.nowData.textSpeed = textSpeed;
-
         // 논리 변수
-        DataManager.Instance.nowData.autoMode = autoMode;
         DataManager.Instance.nowData.doingEvent = doingEvent;
 
         DataManager.Instance.SaveData(num);
@@ -285,12 +278,12 @@ public class GameManager : MonoBehaviour
 
     public void OpenLoadPage()
     {
-        LoadPage.SetActive(true);
+        loadPage.SetActive(true);
     }
 
     public void OpenSettingPage()
     {
-        SettingPage.SetActive(true);
+        settingPage.SetActive(true);
     }
 
     public void OpenGalleryPage()
@@ -300,8 +293,8 @@ public class GameManager : MonoBehaviour
 
     public void ClosePage()
     {
-        SettingPage.SetActive(false);
-        LoadPage.SetActive(false);
+        settingPage.SetActive(false);
+        loadPage.SetActive(false);
         galleryPage.SetActive(false);
     }
 
@@ -331,6 +324,11 @@ public class GameManager : MonoBehaviour
 
     public void PopTask()
     {
+        if (task.Length == 1)
+        {
+            task = "";
+            return;
+        }
         string[] temp = task.Split(',');
         string tempTask = "";
         foreach (string s in temp[1..])
@@ -339,6 +337,15 @@ public class GameManager : MonoBehaviour
         }
         tempTask = tempTask[1..];
         task = tempTask;
+    }
+
+    public int ReturnFirstTask()
+    {
+        if (task.Length <= 0)
+            return -1;
+        if (!task.Contains(','))
+            return int.Parse(task);
+        return int.Parse(task.Split(",")[0]);
     }
 
     public void OrderingTask()
@@ -402,18 +409,18 @@ public class GameManager : MonoBehaviour
 
     public void CheckUI(string mode)
     {
-        LoadCheckPage.SetActive(false);
-        SaveCheckPage.SetActive(false);
-        TitleCheckPage.SetActive(false);
-        StartCheckPage.SetActive(false);
+        loadCheckPage.SetActive(false);
+        saveCheckPage.SetActive(false);
+        titleCheckPage.SetActive(false);
+        startCheckPage.SetActive(false);
         if (mode == "Load")
-            LoadCheckPage.SetActive(true);
+            loadCheckPage.SetActive(true);
         else if (mode == "Save")
-            SaveCheckPage.SetActive(true);
+            saveCheckPage.SetActive(true);
         else if (mode == "Title")
-            TitleCheckPage.SetActive(true);
+            titleCheckPage.SetActive(true);
         else if (mode == "Start")
-            StartCheckPage.SetActive(true);
+            startCheckPage.SetActive(true);
     }
 
     private void OnApplicationQuit()
@@ -421,5 +428,10 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("mVol", masterVol);
         PlayerPrefs.SetFloat("bVol", bgmVol);
         PlayerPrefs.SetFloat("fVol", fxVol);
+
+        PlayerPrefs.SetFloat("autoSpd", coolTime);
+        PlayerPrefs.SetFloat("textSpd", textSpeed);
+
+        PlayerPrefs.SetInt("autoMod", autoMode ? 1 : 0);
     }
 }
