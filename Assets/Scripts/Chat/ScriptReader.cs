@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -192,8 +193,20 @@ public class ScriptReader : MonoBehaviour
         GameManager.Instance.UpdateIdx(++endIdx);
         GameManager.Instance.PopTask();
         GameManager.Instance.CheckNextMonth();
+
+        // 첫만남 에피소드 후 선택한 선택지에 따라 호감도 증가
+        foreach (var s in GameManager.Instance.inactiveBtns.Split(',').Where(x => int.Parse(x) >= 980))
+        {
+            int i = int.Parse(s);
+            if (i - 980 == 0 && GameManager.Instance.loveSummer == 0)
+                GameManager.Instance.loveSummer += 5;
+            else if (i - 980 == 1 && GameManager.Instance.loveFall == 0)
+                GameManager.Instance.loveFall += 5;
+            else if (i - 980 == 2 && GameManager.Instance.loveWinter == 0)
+                GameManager.Instance.loveWinter += 5;
+        }
         
-        SceneManager.LoadScene("ScheduleScene");
+        GameManager.Instance.LoadScheduleScene();
         yield break;
     }
 

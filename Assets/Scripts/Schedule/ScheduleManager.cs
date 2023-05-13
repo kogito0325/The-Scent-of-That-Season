@@ -6,10 +6,14 @@ using UnityEngine.SceneManagement;
 public class ScheduleManager : MonoBehaviour
 {
     public Image[] loveGazes;
+    public Image backGroundImage;
     public Text[] loveAmount;
     public Text moneyTxt;
 
     public GameObject[] tetroPrefabs;
+    public GameObject[] monthIllustObjs;
+    public Sprite[] monthIllusts;
+    public GameObject[] loveChrs;
     public GameObject eventBox;
     public GameObject nowTetro;
     public GameObject listPanel;
@@ -53,6 +57,7 @@ public class ScheduleManager : MonoBehaviour
             UpdateLoves();
             UpdateMoney();
         }
+        CheckMonthIllust();
     }
 
     private void UpdateLoveGazes()
@@ -60,6 +65,11 @@ public class ScheduleManager : MonoBehaviour
         loveGazes[0].fillAmount = (float)loveSummer / 100;
         loveGazes[1].fillAmount = (float)loveFall / 100;
         loveGazes[2].fillAmount = (float)loveWinter / 100;
+
+        // 호감도가 0인(아직 만나지 않은) 캐릭터는 블라인드
+        loveChrs[0].SetActive(loveSummer < 1 ? false : true);
+        loveChrs[1].SetActive(loveFall < 1 ? false : true);
+        loveChrs[2].SetActive(loveWinter < 1 ? false : true);
     }
 
     private void UpdateLoves()
@@ -97,6 +107,17 @@ public class ScheduleManager : MonoBehaviour
 
         // 이벤트 리스트 닫기
         listPanel.SetActive(false);
+    }
+
+    private void CheckMonthIllust()
+    {
+        backGroundImage.sprite = monthIllusts[month / 3 - 1];
+        if (!GameManager.Instance.doingEvent)
+        {
+            if (month % 3 == 0)
+                monthIllustObjs[month / 3 - 1].SetActive(true);
+            Destroy(monthIllustObjs[month / 3 - 1], 4.1f);
+        }
     }
 
     public void ResetTetro()

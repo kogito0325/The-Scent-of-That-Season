@@ -103,17 +103,25 @@ public class BtnManager : MonoBehaviour
     public void ChooseNum()
     {   // 선택지 버튼 - ScriptReader로 클릭한 변수 전달
         GameManager.Instance.UpdateIdx(choiceIdx);
+
+        // 첫만남 에피소드들을 위한 이미 선택한 선택지 제외하기 로직
+        // 클릭한 버튼 비활성화 목록에 추가
         GameManager.Instance.inactiveBtns += "," + choiceIdx.ToString();
+
+        // 첫 에피소드면 다음, 다다음 선택지도 비활성화 목록에 추가
         if (32 <= choiceIdx && choiceIdx <= 34)
         {
             GameManager.Instance.inactiveBtns += "," + (choiceIdx + 474).ToString();
             GameManager.Instance.inactiveBtns += "," + (choiceIdx + 474 + 474).ToString();
         }
+
+        // 두번째 에피소드면 다음 선택지도 비활성화 목록에 추가
         else if (32 + 474 <= choiceIdx && choiceIdx <= 34 + 474)
         {
             GameManager.Instance.inactiveBtns += "," + (choiceIdx + 474).ToString();
         }
         
+        // 버튼 클릭 완료
         scriptReader.choosed = true;
     }
 
