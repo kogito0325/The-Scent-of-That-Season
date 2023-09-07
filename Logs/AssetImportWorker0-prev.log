@@ -1,23 +1,23 @@
 Using pre-set license
-Built from '2021.3/staging' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'ko' Physical Memory: 7911 MB
+Built from '2021.3/evg/staging/82bb020e-b03b1330/draft-0' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'ko' Physical Memory: 32494 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-D:\Unity\Editor\2021.3.16f1\Editor\Unity.exe
+C:\Program Files\2021.3.16f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/Unity/The Scent of That Season
+C:/Users/NGA/The-Scent-of-That-Season
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57141
-Successfully changed project path to: D:/Unity/The Scent of That Season
-D:/Unity/The Scent of That Season
+50071
+Successfully changed project path to: C:/Users/NGA/The-Scent-of-That-Season
+C:/Users/NGA/The-Scent-of-That-Season
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,119 +47,126 @@ D:/Unity/The Scent of That Season
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [6716] Host "[IP] 192.168.135.49 [Port] 0 [Flags] 2 [Guid] 3441073333 [EditorId] 3441073333 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3IDOKRA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [19312] Host "[IP] 172.30.1.84 [Port] 0 [Flags] 2 [Guid] 436116082 [EditorId] 436116082 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-IE072N9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [6716] Host "[IP] 192.168.135.49 [Port] 0 [Flags] 2 [Guid] 3441073333 [EditorId] 3441073333 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3IDOKRA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [19312] Host "[IP] 172.30.1.84 [Port] 0 [Flags] 2 [Guid] 436116082 [EditorId] 436116082 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-IE072N9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 74.84 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 55.75 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
-[Subsystems] Discovering subsystems at path D:/Unity/Editor/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Unity/The Scent of That Season/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/NGA/The-Scent-of-That-Season/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f82)
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2544)
     Vendor:   NVIDIA
-    VRAM:     3950 MB
-    Driver:   31.0.15.2737
+    VRAM:     8049 MB
+    Driver:   31.0.15.3713
 Initialize mono
-Mono path[0] = 'D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Unity/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'D:/Unity/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56284
+Mono path[0] = 'C:/Program Files/2021.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56756
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Unity/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Register platform support module: D:/Unity/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001289 seconds.
+Register platform support module: C:/Program Files/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/2021.3.16f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/2021.3.16f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.003990 seconds.
+Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 71.65 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 54.00 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.482 seconds
+- Completed reload, in  0.375 seconds
 Domain Reload Profiling:
-	ReloadAssembly (483ms)
-		BeginReloadAssembly (49ms)
+	ReloadAssembly (375ms)
+		BeginReloadAssembly (39ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (359ms)
-			LoadAssemblies (49ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (275ms)
+			LoadAssemblies (38ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (76ms)
+			SetupTypeCache (63ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (220ms)
+			RebuildScriptCaches (14ms)
+			SetupLoadedEditorAssemblies (169ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (39ms)
+				InitializePlatformSupportModulesInManaged (40ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (72ms)
+				RefreshPlugins (54ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (75ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
+				ProcessInitializeOnLoadAttributes (51ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003533 seconds.
+Registered in 0.005406 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\The Scent of That Season\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity\The Scent of That Season\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\NGA\The-Scent-of-That-Season\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\NGA\The-Scent-of-That-Season\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 72.92 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 55.46 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.015 seconds
+- Completed reload, in  0.765 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1015ms)
-		BeginReloadAssembly (206ms)
+	ReloadAssembly (766ms)
+		BeginReloadAssembly (174ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (142ms)
-		EndReloadAssembly (726ms)
-			LoadAssemblies (62ms)
+			CreateAndSetChildDomain (123ms)
+		EndReloadAssembly (526ms)
+			LoadAssemblies (50ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (206ms)
+			SetupTypeCache (129ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (375ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (290ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (15ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (73ms)
-				BeforeProcessingInitializeOnLoad (69ms)
-				ProcessInitializeOnLoadAttributes (189ms)
-				ProcessInitializeOnLoadMethodAttributes (34ms)
-				AfterProcessingInitializeOnLoad (1ms)
+				RefreshPlugins (55ms)
+				BeforeProcessingInitializeOnLoad (62ms)
+				ProcessInitializeOnLoadAttributes (131ms)
+				ProcessInitializeOnLoadMethodAttributes (22ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.91 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.70 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4067 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 38 unused Assets / (56.3 KB). Loaded Objects now: 4542.
-Memory consumption went from 164.6 MB to 164.6 MB.
-Total: 4.212600 ms (FindLiveObjects: 0.664800 ms CreateObjectMapping: 0.530600 ms MarkObjects: 2.890100 ms  DeleteObjects: 0.125500 ms)
+Unloading 38 unused Assets / (56.1 KB). Loaded Objects now: 4526.
+Memory consumption went from 151.4 MB to 151.4 MB.
+Total: 2.550400 ms (FindLiveObjects: 0.258400 ms CreateObjectMapping: 0.065800 ms MarkObjects: 2.187100 ms  DeleteObjects: 0.038200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -167,97 +174,13 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 185907.401057 seconds.
-  path: Assets/Scenes/ScheduleScene.unity
-  artifactKey: Guid(4c1a136d764c6a243957de1e6b0b1c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/ScheduleScene.unity using Guid(4c1a136d764c6a243957de1e6b0b1c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c6b2a91db5fef98239986eae17d38c4') in 0.010268 seconds 
+  Time since last request: 270.597243 seconds.
+  path: Assets/Sounds/배경1.mp3
+  artifactKey: Guid(7835451d097dbfc45b573138fef19bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/배경1.mp3 using Guid(7835451d097dbfc45b573138fef19bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49ee3bde888b35048dff75dc89a1d571') in 0.120435 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 107.457858 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro0.prefab
-  artifactKey: Guid(00b7f0226aed4f94a99ce9876d1644ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro0.prefab using Guid(00b7f0226aed4f94a99ce9876d1644ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eedbfa3c2c162eda69915b265669e85e') in 0.164086 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 16.659253 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro1.prefab
-  artifactKey: Guid(e64b7033bdc3ffb41bf7ee2b1e529e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro1.prefab using Guid(e64b7033bdc3ffb41bf7ee2b1e529e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e332e223b283a104ba3b1e32a911b9e') in 0.012283 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 13.070576 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro2.prefab
-  artifactKey: Guid(c10af308f5fbc00429f89d8106ece712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro2.prefab using Guid(c10af308f5fbc00429f89d8106ece712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7696f940a45daae68c49782ecb4c50c') in 0.026789 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 14.306460 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro3.prefab
-  artifactKey: Guid(c45ad4f14f67f8b45a38326e69dc4b27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro3.prefab using Guid(c45ad4f14f67f8b45a38326e69dc4b27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b572dd56f1f39faecb252c7f9b1c661') in 0.010037 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.287981 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro4.prefab
-  artifactKey: Guid(267e0e14d176c164a8e99b6a660af20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro4.prefab using Guid(267e0e14d176c164a8e99b6a660af20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '929a4285ad42824790628f3dc76752b3') in 0.012255 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 26.172774 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro0.prefab
-  artifactKey: Guid(00b7f0226aed4f94a99ce9876d1644ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro0.prefab using Guid(00b7f0226aed4f94a99ce9876d1644ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3dab70c959d5823169a60b585aaa407') in 0.019138 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 38.163287 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro0.prefab
-  artifactKey: Guid(00b7f0226aed4f94a99ce9876d1644ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro0.prefab using Guid(00b7f0226aed4f94a99ce9876d1644ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fee03b35b38f87c42503b1a0eb311d37') in 0.016415 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.183468 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro1.prefab
-  artifactKey: Guid(e64b7033bdc3ffb41bf7ee2b1e529e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro1.prefab using Guid(e64b7033bdc3ffb41bf7ee2b1e529e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91aa3bcc38a1dfa23865c0b2bb8ce522') in 0.010432 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.666218 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro2.prefab
-  artifactKey: Guid(c10af308f5fbc00429f89d8106ece712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro2.prefab using Guid(c10af308f5fbc00429f89d8106ece712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd45f75f58389181dbae6b50f595482f1') in 0.018335 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.231290 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro3.prefab
-  artifactKey: Guid(c45ad4f14f67f8b45a38326e69dc4b27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro3.prefab using Guid(c45ad4f14f67f8b45a38326e69dc4b27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c20f71b5be292b2724f823803924bcd') in 0.045918 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 14.275289 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro4.prefab
-  artifactKey: Guid(267e0e14d176c164a8e99b6a660af20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro4.prefab using Guid(267e0e14d176c164a8e99b6a660af20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cafe17c29ca1c1b6d509b61c467b5ba') in 0.011211 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 24.589913 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro5.prefab
-  artifactKey: Guid(db19dd7e0976a95499f3fe1cdf2a4c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro5.prefab using Guid(db19dd7e0976a95499f3fe1cdf2a4c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61a81072c53bdb2e5fa91259229e2a9a') in 0.013861 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.758263 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro6.prefab
-  artifactKey: Guid(ce6b2a2262119f143b647c515cdbd461) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro6.prefab using Guid(ce6b2a2262119f143b647c515cdbd461) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55bbf032aadbdd06f803491a7acddc88') in 0.037311 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.720586 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro6.prefab
-  artifactKey: Guid(ce6b2a2262119f143b647c515cdbd461) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro6.prefab using Guid(ce6b2a2262119f143b647c515cdbd461) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e08d0e24c2b8ee84337e502af0305db') in 0.031763 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.018816 seconds.
-  path: Assets/Prefabs/Tetrominos/Tetro6.prefab
-  artifactKey: Guid(ce6b2a2262119f143b647c515cdbd461) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Tetrominos/Tetro6.prefab using Guid(ce6b2a2262119f143b647c515cdbd461) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '726fe9f5c408d53f07a2e2242bf8bcb3') in 0.026662 seconds 
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sounds/타이틀.wav
+  artifactKey: Guid(801aca6d6cdf1d14ea845e47f57a22a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/타이틀.wav using Guid(801aca6d6cdf1d14ea845e47f57a22a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07bfa09ca6019dc6e9a770b7918268b3') in 0.014633 seconds 
